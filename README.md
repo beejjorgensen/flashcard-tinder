@@ -3,7 +3,7 @@
 
 ### Built using:
 
-      * React
-      * Express / MongoDB
-      * Jquery
-      * Bootstrap
+      *React
+      *Express / MongoDB
+      *Jquery
+      *Bootstrap
