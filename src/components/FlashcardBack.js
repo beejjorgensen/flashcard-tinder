@@ -1,24 +1,34 @@
 import React, { Component } from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Button } from 'semantic-ui-react';
 import '../App.css';
 
 class FlashcardBack extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      answer: 'World',
-      id: 1
+      id: 1,
+      answer: "'Splice' (Array)",
+
     }
   }
   
   render() {
     return (
-      <Card
-        header={this.state.id}
-        description={this.state.answer}
-        extra='RED BUTTON || GREEN BUTTON'
-      >
+      <div>
+      <Card className="flashcard">
+        <Card.Header>
+          Card Number: {this.state.id}
+        </Card.Header>
+        <Card.Description>
+          {this.state.answer}
+        </Card.Description>
+        <Card.Content extra>
+          <p>array.splice(start)<br /><br />
+             array.splice(start, deleteCount)<br /><br />
+             array.splice(start, deleteCount, item1, item2, ...)</p>
+        </Card.Content>
       </Card>
+      </div>
     )
   }
 }
