@@ -18,8 +18,10 @@ class FlashPage extends Component {
           padded={true}
           stretched={true}
         >
-          <Grid.Column textAlign="center"> // The grid aligns everything in the middle of the screen
-            <Reveal animated='fade' duration={100}> // A semantic UI element, we're using it to 'reveal' the back of the flashcard
+          {/* The grid aligns everything in the middle of the screen */}
+          <Grid.Column textAlign="center"> 
+          {/* // A semantic UI element, we're using it to 'reveal' the back of the flashcard */}
+            <Reveal animated='fade' duration={100}> 
               <Reveal.Content visible>
                 <FlashcardFront />
               </Reveal.Content>
@@ -31,7 +33,8 @@ class FlashPage extends Component {
           <Grid.Column textAlign="center">
         </Grid.Column>
         </Grid>
-        <div className="buttonField"> // These buttons aren't doing anything right now, just there FPO
+        <div className="buttonField"> 
+        {/* These buttons aren't doing anything right now, just there FPO */}
           <Button color="green">Like It</Button>
           <Button color="red">Hate It</Button>
         </div>
