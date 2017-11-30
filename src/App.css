@@ -1,3 +1,7 @@
+/************************************************
+MAIN
+************************************************/
+
 .App {
   width: 100%;
   min-height: 100%;
@@ -11,6 +15,17 @@
   justify-content: center;
 }
 
+
+/************************************************
+FLASHCARD
+************************************************/
+
+.flashcard {
+  height: 20rem;
+  margin-top: 1.5rem;
+  background-color: #D9DBF1;
+}
+
 .header {
   padding-top: .5rem;
   padding-bottom: .5rem;
@@ -22,15 +37,6 @@
   padding-bottom: .5rem;
 }
 
-.flashcard {
-  height: 20rem;
-  margin-top: 1.5rem;
-  background-color: #D9DBF1;
-}
-
-.extracontent {
-  background-color: #D9DBF1;
-}
 
 .buttonField {
   width: 45%;
@@ -38,5 +44,4 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
 }

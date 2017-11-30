@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, Button } from 'semantic-ui-react';
 import '../App.css';
 
+// Displays the back 'hidden' text of the flashcard
 class FlashcardBack extends Component {
   constructor(props) {
     super(props);
