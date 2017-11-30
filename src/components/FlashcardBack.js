@@ -7,15 +7,17 @@ class FlashcardBack extends Component {
     super(props);
     this.state = {
       answer: 'World',
+      id: 1
     }
   }
   
   render() {
     return (
-      <Card className="flashcard">
-        <Card.Content>
-          {this.state.answer}
-        </Card.Content>
+      <Card
+        header={this.state.id}
+        description={this.state.answer}
+        extra='RED BUTTON || GREEN BUTTON'
+      >
       </Card>
     )
   }

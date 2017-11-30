@@ -7,16 +7,19 @@ class FlashcardFront extends Component {
     super(props);
     this.state = {
       question: 'Hello',
+      id: 1
     }
   }
 
   render() {
 
     return (
-      <Card className="flashcard">
-        <Card.Content>
-          {this.state.question}
-        </Card.Content>
+      <Card 
+        raised={true}
+        header={this.state.id}
+        description={this.state.question}
+        extra='RED BUTTON || GREEN BUTTON'
+      >
       </Card>
     )
   }

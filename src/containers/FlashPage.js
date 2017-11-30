@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FlashcardFront from '../components/FlashcardFront';
 import FlashcardBack from '../components/FlashcardBack';
-import { Reveal, Container } from 'semantic-ui-react';
+import { Reveal, Grid } from 'semantic-ui-react';
 import '../App.css';
 
 class FlashPage extends Component {
@@ -13,19 +13,28 @@ class FlashPage extends Component {
   
   render() {
     return (
-      <Container 
-        className="container"
+      <Grid 
+        padded={true}
         textAlign="center"
+        verticalAlign="middle"
+        horizontalAlign="middle"
+        container={true}
       >
-        <Reveal animated='small fade'>
-          <Reveal.Content visible={true}>
-            <FlashcardFront />
-          </Reveal.Content>
-          <Reveal.Content hidden={true}>
-            <FlashcardBack />
-          </Reveal.Content>
-        </Reveal>
-      </Container>
+        <Grid.Column 
+          textAlign="center"
+          verticalAlign="middle"
+          horizontalAlign="middle"
+        >
+          <Reveal animated='fade'>
+            <Reveal.Content visible>
+              <FlashcardFront />
+            </Reveal.Content>
+            <Reveal.Content>
+              <FlashcardBack />
+            </Reveal.Content>
+          </Reveal>
+        </Grid.Column>
+      </Grid>
     )
   }
 }
