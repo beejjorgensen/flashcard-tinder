@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import FlashcardFront from '../components/FlashcardFront';
 import FlashcardBack from '../components/FlashcardBack';
-import { Reveal, Grid, Button } from 'semantic-ui-react';
+import FlashCardButton from '../components/FlashcardButton';
+import { Reveal, Grid } from 'semantic-ui-react';
 import '../App.css';
 
 class FlashPage extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
     }
   }
@@ -33,10 +34,11 @@ class FlashPage extends Component {
           <Grid.Column textAlign="center">
         </Grid.Column>
         </Grid>
-        <div className="buttonField"> 
+        <div>
         {/* These buttons aren't doing anything right now, just there FPO */}
-          <Button color="green">Like It</Button>
-          <Button color="red">Hate It</Button>
+          {/* <Button color="green">Like It</Button>
+          <Button color="red">Hate It</Button> */}
+          <FlashCardButton />
         </div>
       </div>
     )

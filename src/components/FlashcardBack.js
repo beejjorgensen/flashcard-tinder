@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, Button } from 'semantic-ui-react';
+import flashCardData from '../application_data';
 import '../App.css';
 
 // Displays the back 'hidden' text of the flashcard
@@ -8,12 +9,13 @@ class FlashcardBack extends Component {
     super(props);
     this.state = {
       id: 1,
-      answer: "'Splice' (Array)",
+      answer: [],
 
     }
   }
   
   render() {
+    const flashCard = flashCardData[0];
     return (
       <div>
       <Card className="flashcard">
@@ -24,9 +26,10 @@ class FlashcardBack extends Component {
           {this.state.answer}
         </Card.Description>
         <Card.Content extra>
-          <p>array.splice(start)<br /><br />
+          {flashCard.answer}
+          {/* <p>array.splice(start)<br /><br />
              array.splice(start, deleteCount)<br /><br />
-             array.splice(start, deleteCount, item1, item2, ...)</p>
+             array.splice(start, deleteCount, item1, item2, ...)</p> */}
         </Card.Content>
       </Card>
       </div>
