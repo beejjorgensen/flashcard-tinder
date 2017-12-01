@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FlashcardFront from '../components/FlashcardFront';
 import FlashcardBack from '../components/FlashcardBack';
-import FlashcardButton from '../components/FlashcardButton';
+import FlashCardButton from '../components/FlashcardButton';
 import { Reveal, Grid } from 'semantic-ui-react';
 import '../App.css';
 
@@ -38,7 +38,7 @@ class FlashPage extends Component {
         {/* These buttons aren't doing anything right now, just there FPO */}
           {/* <Button color="green">Like It</Button>
           <Button color="red">Hate It</Button> */}
-          <FlashcardButton />
+          <FlashCardButton />
         </div>
       </div>
     )
