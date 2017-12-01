@@ -1,0 +1,47 @@
+/************************************************
+MAIN
+************************************************/
+
+.App {
+  width: 100%;
+  min-height: 100%;
+  background-color: #0B3948;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/************************************************
+FLASHCARD
+************************************************/
+
+.flashcard {
+  height: 20rem;
+  margin-top: 1.5rem;
+  background-color: #D9DBF1;
+}
+
+.header {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: #D0CDD7;
+}
+
+.description {
+  background-color: #D0CDD7;
+  padding-bottom: .5rem;
+}
+
+
+.buttonField {
+  width: 45%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
