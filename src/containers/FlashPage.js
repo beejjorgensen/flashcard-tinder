@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FlashcardFront from '../components/FlashcardFront';
 import FlashcardBack from '../components/FlashcardBack';
-import { Reveal, Grid } from 'semantic-ui-react';
+import { Reveal, Grid, Button } from 'semantic-ui-react';
 import '../App.css';
 
 class FlashPage extends Component {
@@ -13,28 +13,32 @@ class FlashPage extends Component {
   
   render() {
     return (
-      <Grid 
-        padded={true}
-        textAlign="center"
-        verticalAlign="middle"
-        horizontalAlign="middle"
-        container={true}
-      >
-        <Grid.Column 
-          textAlign="center"
-          verticalAlign="middle"
-          horizontalAlign="middle"
+      <div className="container">
+        <Grid 
+          padded={true}
+          stretched={true}
         >
-          <Reveal animated='fade'>
-            <Reveal.Content visible>
-              <FlashcardFront />
-            </Reveal.Content>
-            <Reveal.Content>
-              <FlashcardBack />
-            </Reveal.Content>
-          </Reveal>
+          {/* The grid aligns everything in the middle of the screen */}
+          <Grid.Column textAlign="center"> 
+          {/* // A semantic UI element, we're using it to 'reveal' the back of the flashcard */}
+            <Reveal animated='fade' duration={100}> 
+              <Reveal.Content visible>
+                <FlashcardFront />
+              </Reveal.Content>
+              <Reveal.Content>
+                <FlashcardBack />
+              </Reveal.Content>
+            </Reveal>
+          </Grid.Column>
+          <Grid.Column textAlign="center">
         </Grid.Column>
-      </Grid>
+        </Grid>
+        <div className="buttonField"> 
+        {/* These buttons aren't doing anything right now, just there FPO */}
+          <Button color="green">Like It</Button>
+          <Button color="red">Hate It</Button>
+        </div>
+      </div>
     )
   }
 }

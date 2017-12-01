@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Button } from 'semantic-ui-react';
 import '../App.css';
 
+// Displays the front text of the flashcard
 class FlashcardFront extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      question: 'Hello',
+      question: "'Splice' (Array)",
       id: 1
     }
   }
 
   render() {
-
     return (
-      <Card 
-        raised={true}
-        header={this.state.id}
-        description={this.state.question}
-        extra='RED BUTTON || GREEN BUTTON'
-      >
-      </Card>
+      <div>
+        <Card className="flashcard" raised={true}>
+          <Card.Header>
+            Card Number: {this.state.id}
+          </Card.Header>
+          <Card.Description>
+          {this.state.question}          
+          </Card.Description>
+        </Card>
+      </div>
     )
   }
 }
