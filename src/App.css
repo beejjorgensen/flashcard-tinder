@@ -45,3 +45,14 @@ FLASHCARD
   justify-content: space-around;
   align-items: center;
 }
+
+/************************************************
+SIGN-IN MODAL
+************************************************/
+.modal {
+  color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+};
