@@ -46,6 +46,7 @@ FLASHCARD
   align-items: center;
 }
 
+<<<<<<< HEAD
 /************************************************
 SIGN-IN MODAL
 ************************************************/
@@ -56,3 +57,55 @@ SIGN-IN MODAL
   justify-content: center;
   align-items: center;
 };
+=======
+
+/*********************************************************************/
+
+.topic-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.topics {
+  width: 100px;
+  height: 100px;
+}
+
+.btnTopic {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  /* outline: none; */
+}
+
+.topic-header {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.cat-header {
+  color: #FFF;
+  font-size: 80px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  border: 1px solid #F7E018;
+  background-color: #F7E018;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  font-size: 2vw;
+  font-weight: bold;
+  width: 40%;
+}
+
+a {
+  color: #000;
+}
+>>>>>>> upstream/master
