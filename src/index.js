@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+  <Router store={createStoreWithMiddleware(reducers)}>
     <App />
-  </Provider>
+  </Router>
 , document.getElementById('root'));
