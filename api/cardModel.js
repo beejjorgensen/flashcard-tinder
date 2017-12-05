@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const CardSchema = new Schema({
+  id: {
+    type: Number,
+    required: true,
+  },
   frontCard: {
     type: String,
     required: true,
