@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import reducers from './reducers';
 
@@ -12,7 +12,7 @@ const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENS
 
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Router store={createStoreWithMiddleware(reducers)}>
     <App />
-  </Provider>
+  </Router>
 , document.getElementById('root'));
