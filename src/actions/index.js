@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const FETCH_FLASHCARDS = 'fetch_flashcards';
+export const FETCH_FLASHCARDS = 'fetch_flashcards';
 
 const ROOT_URL = 'http://serverNameHere.herokuapp.com/'
 
