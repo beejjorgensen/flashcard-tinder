@@ -2956,11 +2956,7 @@ hoek@4.x.x:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.0.tgz#72d9d0754f7fe25ca2d01ad8f8f9a9449a89526d"
 
-<<<<<<< HEAD
-hoist-non-react-statics@^2.2.1:
-=======
 hoist-non-react-statics@^2.2.1, hoist-non-react-statics@^2.3.0:
->>>>>>> 4e3593bbf8f9c1c84847e34c4e375970cd9bd15d
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.3.1.tgz#343db84c6018c650778898240135a1420ee22ce0"
 
@@ -3185,11 +3181,7 @@ interpret@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.1.0.tgz#7ed1b1410c6a0e0f78cf95d3b8440c63f78b8614"
 
-<<<<<<< HEAD
-invariant@^2.0.0, invariant@^2.2.2:
-=======
 invariant@^2.0.0, invariant@^2.2.1, invariant@^2.2.2:
->>>>>>> 4e3593bbf8f9c1c84847e34c4e375970cd9bd15d
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
@@ -5179,8 +5171,6 @@ react-redux@^5.0.6:
     loose-envify "^1.1.0"
     prop-types "^15.5.10"
 
-<<<<<<< HEAD
-=======
 react-router-dom@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.2.2.tgz#c8a81df3adc58bba8a76782e946cbd4eae649b8d"
@@ -5204,7 +5194,6 @@ react-router@^4.2.0:
     prop-types "^15.5.4"
     warning "^3.0.0"
 
->>>>>>> 4e3593bbf8f9c1c84847e34c4e375970cd9bd15d
 react-scripts@1.0.17:
   version "1.0.17"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-1.0.17.tgz#c30029123b561a060227af4d7797d50a222d3fbf"

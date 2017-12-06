@@ -14,7 +14,7 @@ class App extends Component {
          <Navigation />
          <Route exact path="/" component={ Language }/>
            <Route path="/javascript" component={ JavaScript }/>
-         <Route path="/flashPage" component={ FlashPage }/>
+         <Route path="/flashPage" component={ Menubar }/>
          <Route path="/signIn" component={ SignInModal }/>
       </div>
     );
