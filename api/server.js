@@ -7,6 +7,16 @@ const Card = require('./cardModel.js');
 const server = express();
 server.use(bodyParser.json());
 
+
+server.post('/cards', (req, res) => {
+  const { _id, frontCard, backCard } = req.body;
+  const card = new Card({_id, frontCard, backCard});
+  card.save((err, newCard) => {
+    if (err) return res.send(err);
+    res.json(newCard)
+  });
+});
+
 server.get('/cards', (req, res) => {
   console.log('Hello from server.get /cards route!');
   Card.find({}, (err, card) => {
