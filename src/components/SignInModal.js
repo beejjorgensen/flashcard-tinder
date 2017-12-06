@@ -18,7 +18,7 @@ class SignInModal extends Component {
         <Header >FACEBOOK</Header>
         <Header >SIGN UP</Header>
         
-      </Modal.Description>
+      </Modal.Description> */}
     </Modal.Content>
   </Modal>
     )
