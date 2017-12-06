@@ -1,16 +1,18 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const Card = require('./cardModel.js');
 
 
 const server = express();
+server.use(bodyParser.json());
 
 server.get('/cards', (req, res) => {
   console.log('Hello from server.get /cards route!');
-  Card.find({}, (err, post) => {
+  Card.find({}, (err, card) => {
     console.log(card);
     if (err) return res.send(err);
-    res.json(post);
+    res.json(card);
   });
 });
 
