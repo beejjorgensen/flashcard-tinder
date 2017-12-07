@@ -55,54 +55,110 @@ SIGN-IN MODAL
   flex-direction: column;
   justify-content: center;
   align-items: center;
-};
-
-/*********************************************************************/
-
-.topic-container, .btn-back {
-  margin: 0 auto;
-  text-align: center;
 }
 
-.topics {
-  width: 100px;
-  height: 100px;
+/************************************************
+Category Components
+************************************************/
+.category-header h1 {
+  color: #FFF;
+  font-size: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -55px;
+  margin-bottom: 20px;
+}
+
+.category-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+ul {
+  list-style-type: none;
+  width: 50%;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+li {
+  display: inline-block;
+  border: 1px solid #F7E018;
+  border-radius: 10%;
+  background-color: #F7E018;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 1.5vw;
+  font-weight: bold;
+  width: 45%;
+  text-align: center;
+  
+}
+
+.btn-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: #000;
+}
+
+/************************************************
+Language Components
+************************************************/
+
+.typewriter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 75px;
+}
+
+.typewriter h1 {
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #fff; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 5.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #FFF }
+}
+.lang-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 75px;
 }
 
 .btnTopic {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  /* outline: none; */
-}
-
-.topic-header {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-}
-
-.cat-header {
-  color: #FFF;
-  font-size: 80px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  display: inline-block;
-  border: 1px solid #F7E018;
-  background-color: #F7E018;
-  margin-top: 10px;
-  margin-right: 10px;
-  padding: 20px;
-  font-size: 2vw;
-  font-weight: bold;
-  width: 40%;
-}
-
-a {
-  color: #000;
 }
