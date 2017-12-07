@@ -49,7 +49,7 @@ FLASHCARD
 
 /*********************************************************************/
 
-.topic-container {
+.topic-container, .btn-back {
   margin: 0 auto;
   text-align: center;
 }
@@ -95,4 +95,13 @@ li {
 
 a {
   color: #000;
+}
+
+h1 {
+  color: #FFF;
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50em;
+  animation: type 4s steps(60, end);
 }
