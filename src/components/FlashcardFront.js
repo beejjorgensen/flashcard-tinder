@@ -3,32 +3,47 @@ import { Card } from 'semantic-ui-react';
 import flashCardData from '../application_data';
 import '../App.css';
 
+import axios from 'axios';
+import { connect } from 'react-redux';
+
 // Displays the front text of the flashcard
 class FlashcardFront extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      question: [],
-      id: 1
-    }
+  state = {
+    cards: []
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:8080/cards')
+      .then(response => {
+        this.setState({ cards: response.data });
+        console.log("componentDidMount", response);
+      });
   }
 
   render() {
-    const flashCard = flashCardData[0];
+    const cards = this.state.cards.map(card => {
+      return <div key={card._id}>{card.frontCard}</div>
+    });
     return (
       <div>
         <Card className="flashcard" raised={true}>
           <Card.Header>
-            Card Number: {this.state.id}
+            Card Number: {this.props.cards.id}
           </Card.Header>
           <Card.Description>
-            {this.state.question}
+            {/* {this.state.question} */}
           </Card.Description>
-            {flashCard.question}
+          {cards}
+          {console.log('JSX Return statement', cards)}
         </Card>
       </div>
-    )
+    );
   }
 }
 
-export default FlashcardFront;
+function mapStateToProps({ cards }) {
+  console.log('mapStateToProps state', cards);
+  return { cards }
+}
+
+export default connect(mapStateToProps)(FlashcardFront);
