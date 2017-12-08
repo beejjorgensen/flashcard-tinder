@@ -26,7 +26,7 @@ FLASHCARD
   background-color: #D9DBF1;
 }
 
-.header {
+.flash-head {
   padding-top: .5rem;
   padding-bottom: .5rem;
   background-color: #D0CDD7;
@@ -162,3 +162,26 @@ Language Components
   border: none;
   cursor: pointer;
 }
+
+
+/************************************************
+LANDING PAGE
+************************************************/
+
+.LoginButton {
+  margin-left: 0.5rem;
+}
+
+.top-container {
+  min-height: 43.75rem;
+  padding: 1em 0em;
+}
+
+.ui .inverted .header .main-header {
+  font-size: 4em;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 3em;
+  
+}
+

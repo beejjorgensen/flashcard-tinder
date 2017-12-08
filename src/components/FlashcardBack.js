@@ -19,7 +19,7 @@ class FlashcardBack extends Component {
     return (
       <div>
       <Card className="flashcard">
-        <Card.Header>
+        <Card.Header className='flash-head'>
           Card Number: {this.state.id}
         </Card.Header>
         <Card.Description>
