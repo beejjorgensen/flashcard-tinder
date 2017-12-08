@@ -27,17 +27,20 @@ class FlashcardBack extends Component {
     });
     return (
       <div>
-        <Card className="flashcard">
-          <Card.Header>
-            Card Number: {this.state.id}
-          </Card.Header>
-          <Card.Description>
-            {this.state.answer}
-          </Card.Description>
-          <Card.Content extra>
-            {cards}
-          </Card.Content>
-        </Card>
+      <Card className="flashcard">
+        <Card.Header className='flash-head'>
+          Card Number: {this.state.id}
+        </Card.Header>
+        <Card.Description>
+          {this.state.answer}
+        </Card.Description>
+        <Card.Content extra>
+          {flashCard.answer}
+          {/* <p>array.splice(start)<br /><br />
+             array.splice(start, deleteCount)<br /><br />
+             array.splice(start, deleteCount, item1, item2, ...)</p> */}
+        </Card.Content>
+      </Card>
       </div>
     )
   }

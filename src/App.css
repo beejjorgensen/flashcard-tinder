@@ -26,7 +26,7 @@ FLASHCARD
   background-color: #D9DBF1;
 }
 
-.header {
+.flash-head {
   padding-top: .5rem;
   padding-bottom: .5rem;
   background-color: #D0CDD7;
@@ -106,3 +106,76 @@ li {
 a {
   color: #000;
 }
+
+/************************************************
+Language Components
+************************************************/
+
+.typewriter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 75px;
+}
+
+.typewriter h1 {
+  color: #fff;
+  font-family: 'Space Mono', monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #fff; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 5.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #FFF }
+}
+.lang-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 75px;
+}
+
+.btnTopic {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+/************************************************
+LANDING PAGE
+************************************************/
+
+.LoginButton {
+  margin-left: 0.5rem;
+}
+
+.top-container {
+  min-height: 43.75rem;
+  padding: 1em 0em;
+}
+
+.ui .inverted .header .main-header {
+  font-size: 4em;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 3em;
+  
+}
+

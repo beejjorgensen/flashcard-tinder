@@ -13,6 +13,7 @@ import SignInModal from './components/SignInModal';
 import Navigation from './components/Navigation';
 import Language from './components/Language';
 import JavaScript from './components/Javascript';
+import Landing from './containers/Landing';
 import Menubar from './containers/Menubar';
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
@@ -26,6 +27,7 @@ ReactDOM.render(
         <Route path="/flashPage" component={Menubar} />
         <Route path="/signIn" component={SignInModal} />
         <Route exact path="/" component={Language} />
+        <Route path="/test" component={Landing} />
       </div>
     </BrowserRouter>
   </Provider>
