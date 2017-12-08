@@ -35,7 +35,7 @@ class FlashcardBack extends Component {
           {this.state.answer}
         </Card.Description>
         <Card.Content extra>
-          {flashCard.answer}
+          {cards}
           {/* <p>array.splice(start)<br /><br />
              array.splice(start, deleteCount)<br /><br />
              array.splice(start, deleteCount, item1, item2, ...)</p> */}
