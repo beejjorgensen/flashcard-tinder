@@ -36,9 +36,6 @@ class FlashcardBack extends Component {
         </Card.Description>
         <Card.Content extra>
           {cards}
-          {/* <p>array.splice(start)<br /><br />
-             array.splice(start, deleteCount)<br /><br />
-             array.splice(start, deleteCount, item1, item2, ...)</p> */}
         </Card.Content>
       </Card>
       </div>

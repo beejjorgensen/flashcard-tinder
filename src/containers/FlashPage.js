@@ -22,7 +22,7 @@ class FlashPage extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="flashPage">
         <Grid
           padded={true}
           stretched={true}
