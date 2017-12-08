@@ -1,23 +1,22 @@
 import React, { Component } from 'react'
 import { Divider, Image } from 'semantic-ui-react'
-import { Link } from 'react-router-dom';
 import '../App.css';
 
 class JavaScript extends Component {
    render() {
         return (
         <div>
-          <div className="category-icon">
+          <div className="topic-container">
             <Image.Group size='small'>
-               <Image src='/assets/javascript_icon.png'/>
+               <Image src='/assets/javascript.png'/>
             </Image.Group>
             <Divider hidden />
           </div>
 
-          <div className="category-header">
-            <h1>JavaScript Study</h1> 
+          <div className="topic-container">
+            <h1 className="cat-header">JavaScript Study</h1> 
           </div>
-          <ul className="category-list">
+          <ul className="topic-container links">
              <a href="#"><li>Overview</li></a>
              <a href="#"><li>Basic Concepts</li></a>
              <a href="#"><li>Conditions and Loops</li></a>
@@ -31,9 +30,6 @@ class JavaScript extends Component {
              <a href="#"><li>Apply, Call & Bind</li></a>
              <a href="#"><li>Scope</li></a>
           </ul>
-          <div className="btn-back" >
-             <Link to="/"><img src="/assets/back-button.png" className="btn-back"/></Link>
-          </div>
         </div>
         );
     }

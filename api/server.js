@@ -3,10 +3,17 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Card = require('./cardModel.js');
 
-
+const cors = require('cors');
 const server = express();
 server.use(bodyParser.json());
-
+const corsOptions = {
+  "origin": "http://localhost:3000",
+  "methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
+  "preflightContinue": true,
+  "optionsSuccessStatus": 204,
+  "credentials": true // enable set cookie
+};
+server.use(cors(corsOptions));
 
 server.post('/cards', (req, res) => {
   const { _id, frontCard, backCard } = req.body;
