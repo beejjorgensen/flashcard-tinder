@@ -7,7 +7,6 @@ import {
   Grid,
   Header,
   Icon,
-  Image,
   List,
   Menu,
   Segment,
@@ -94,12 +93,6 @@ export default class HomepageLayout extends Component {
                 </p>
               </Grid.Column>
               <Grid.Column floated='right' width={6}>
-                <Image
-                  bordered
-                  rounded
-                  size='large'
-                  src='/assets/images/wireframe/white-image.png'
-                />
               </Grid.Column>
             </Grid.Row>
             <Grid.Row>
@@ -119,8 +112,6 @@ export default class HomepageLayout extends Component {
               <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
                 <Header as='h3' style={{ fontSize: '2em' }}></Header>
                 <p style={{ fontSize: '1.33em' }}>
-                  <Image avatar src='/assets/images/avatar/large/nan.jpg' />
-                  <b>Nan</b>
                 </p>
               </Grid.Column>
             </Grid.Row>
@@ -160,7 +151,7 @@ export default class HomepageLayout extends Component {
                   </List>
                 </Grid.Column>
                 <Grid.Column width={3}>
-                  <Header inverted as='h4' content='Services' />
+                  <Header inverted as='h4' content='' />
                   <List link inverted>
                     <List.Item as='a'></List.Item>
                     <List.Item as='a'></List.Item>
