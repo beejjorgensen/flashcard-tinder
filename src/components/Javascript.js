@@ -18,7 +18,7 @@ class JavaScript extends Component {
             <h1 className="category-header">JavaScript Study</h1> 
           </div>
           <ul className="category-list">
-             <a href="#"><li>Overview</li></a>
+             <a href="/flashpage"><li>Overview</li></a>
              <a href="#"><li>Basic Concepts</li></a>
              <a href="#"><li>Conditions and Loops</li></a>
              <a href="#"><li>Functions</li></a>

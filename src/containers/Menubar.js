@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import Landing from './Landing';
 import FlashPage from './FlashPage';
 import { Sidebar, Segment, Button, Menu, Image, Icon, Header } from 'semantic-ui-react';
+import '../App.css';
 
 class Menubar extends Component {
   constructor() {
@@ -20,32 +22,22 @@ class Menubar extends Component {
     const { visible } = this.state;
 
     return (
-      <div>
-        <Button onClick={this.toggleVisiblity}>I'm a hamburger</Button>
-        <Sidebar.Pushable as={Segment}>
+      <div className="menu">
+        <Button onClick={this.toggleVisiblity} className="menu-button" style={ {padding: 0, margin: '1rem'} }><Image src="/assets/hamburger.png" className="hamburger" /></Button>
+        <Sidebar.Pushable>
           <Sidebar 
             as={Menu}
             animation='overlay'
             width='thin' 
             visible={visible}
             icon='labeled'
-            vertical inverted
+            vertical
           >
-            <Menu.Item>
+            <Menu.Item href='/'>
               Home
             </Menu.Item>
-            <Menu.Item>
-              Topics
-            </Menu.Item>
-            <Menu.Item>
-              Settings
-            </Menu.Item>
           </Sidebar>
-          <Sidebar.Pusher>
-            <Segment basic>
-              <FlashPage />
-            </Segment>
-          </Sidebar.Pusher>
+            <FlashPage />
         </Sidebar.Pushable>
       </div>
     )

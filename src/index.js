@@ -26,8 +26,7 @@ ReactDOM.render(
         <Route path="/javascript" component={JavaScript} />
         <Route path="/flashPage" component={Menubar} />
         <Route path="/signIn" component={SignInModal} />
-        <Route exact path="/" component={Language} />
-        <Route path="/test" component={Landing} />
+        <Route exact path="/" component={Landing} />
       </div>
     </BrowserRouter>
   </Provider>

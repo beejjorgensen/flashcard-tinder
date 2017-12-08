@@ -48,10 +48,10 @@ class FlashCardButton extends Component {
           {this.props.answer}
         </div>
         <div>
-          <Button basic color='red' onClick={this.handleClickRed}>
+          <Button color='red' onClick={this.handleClickRed}>
           <div>Hate It!</div>
           </Button>
-          <Button basic color='green' onClick={this.handleClickGreen}>
+          <Button color='green' onClick={this.handleClickGreen}>
           <div>Like It!</div>
           </Button>
         </div>
