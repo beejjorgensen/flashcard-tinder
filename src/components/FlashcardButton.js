@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import flashCardData from '../application_data';
 import { Button } from 'semantic-ui-react';
+// import flashCardData from '../application_data';
 
 class FlashCardButton extends Component {
   constructor(props) {

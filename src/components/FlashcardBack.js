@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Button } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
 import flashCardData from '../application_data';
 import '../App.css';
 

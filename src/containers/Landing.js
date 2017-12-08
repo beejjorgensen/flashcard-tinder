@@ -4,11 +4,9 @@ import Language from '../components/Language';
 import {
   Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
-  List,
   Menu,
   Segment,
   Visibility,

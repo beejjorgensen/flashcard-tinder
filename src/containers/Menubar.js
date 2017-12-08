@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Landing from './Landing';
 import FlashPage from './FlashPage';
-import { Sidebar, Segment, Button, Menu, Image, Icon, Header } from 'semantic-ui-react';
+import { Sidebar, Button, Menu, Image, } from 'semantic-ui-react';
 import '../App.css';
 
 class Menubar extends Component {
