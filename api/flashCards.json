@@ -1,7 +1,9 @@
 {
   { 
     "ID" : "arr1",
-    "FrontCard" : "includes()",
+    "FrontCard" : { 
+      "ITEM" : "includes()" 
+    },
     "BackCard" : {
       "DEFINITION" : "includes() determines whether an array includes a certain element. returns TRUE or FALSE.",
       "EXAMPLE" : "let a = [1,2,3] a.includes(2) // true a.includes(4) // false",
@@ -10,7 +12,9 @@
   },
    {
     "ID" : "arr2",
-    "FrontCard" : "indexOf()",
+    "FrontCard" : {
+      "ITEM" : "indexOf()" 
+    },
     "BackCard" : {
       "DEFINITION" : "indexOf() returns the first index at which a given element can be found in the array. Returns -1 if it is not found.",
       "EXAMPLE" : "let a = [1,2,3] a.indexOf(2) // 1 a.indexOf(4) // -1",
@@ -18,7 +22,9 @@
     }
   }, {
     "ID" : "arr3",
-    "FrontCard" : "slice()",
+    "FrontCard" : { 
+      "ITEM" : "slice()" 
+    },
     "BackCard" : {
       "DEFINITION" : "slice() returns a shallow COPY of a portion of an array into a new array object selected from BEGIN (Inclusive) to END (Non-Inclusive). ORIGINAL ARRAY NOT MUTATED.",
       "EXAMPLE" : "let a = ['zero', 'one', 'two','three'] let sliced = a.slice(1,3) a = ['zero', 'one', 'two','three'] sliced = ['one', 'two']",
@@ -26,7 +32,9 @@
     }
   }, {
     "ID" : "arr4",
-    "FrontCard" : "splice()",
+    "FrontCard" : { 
+      "ITEM" : "splice()" 
+    },
     "BackCard" : {
       "DEFINITION" : "splice() changes the contents of an array by removing existing elements and/or adding new elements.",
       "EXAMPLE" : "let numbers = ['zero', 'one', 'two', 'three'] numbers.splice(2, 0, 'BANANA') // inserts banana at index-2 // numbers = ['zero', 'one', 'BANANA', 'two', 'three'] numbers.splice(2,1) // removes 1 item starting at index-2 // numbers = numbers = ['zero', 'one', 'three'] ",
@@ -34,7 +42,9 @@
     }
   }, {
     "ID" : "arr5",
-    "FrontCard" : "every()",
+    "FrontCard" : {
+      "ITEM" : "every()" 
+    },
     "BackCard" : {
       "DEFINITION" : "every() tests whether ALL ELEMENTS in the array pass the test implemented by the provided function.",
       "EXAMPLE" : "function isBigEnough(element, index, array) { return element >= 10 } [2, 4 , 6, 8].every(isBigEnough) // false [12, 14, 16, 18].every(isBigEnough) // true",
