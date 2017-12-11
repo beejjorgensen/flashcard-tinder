@@ -28,13 +28,12 @@ class FlashcardFront extends Component {
       <div>
         <Card className="flashcard" raised={true}>
           <Card.Header>
-            Card Number: {this.props.cards.id}
+            Card Number: 1
           </Card.Header>
-          <Card.Description>
-            {/* {this.state.question} */}
-          </Card.Description>
-          {cards}
-          {console.log('JSX Return statement', cards)}
+          <Card.Content extra>
+            {cards}
+            {console.log('JSX Return statement', cards)}
+          </Card.Content>
         </Card>
       </div>
     );
