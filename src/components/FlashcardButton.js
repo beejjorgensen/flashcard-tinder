@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import flashCardData from '../application_data';
 import { Button } from 'semantic-ui-react';
+// import flashCardData from '../application_data';
 
 class FlashCardButton extends Component {
   constructor(props) {
@@ -26,18 +26,6 @@ class FlashCardButton extends Component {
     });
   }
 
-  /*
-  handleNextFlashCard = (flashCardId) => {
-    const nextFlashCard = this.state.green.map((flashCard) => {
-      // if else?? 
-    });
-    // check state and move to next flash card
-    this.setState({
-      green: nextFlashCard
-    });
-  }
-  */
-
   render() {
     return (
       <div>
@@ -48,11 +36,9 @@ class FlashCardButton extends Component {
           {this.props.answer}
         </div>
         <div>
-          <Button color='red' onClick={this.handleClickRed}>
-          <div>Hate It!</div>
+          <Button color='red' circular onClick={this.handleClickRed}>
           </Button>
-          <Button color='green' onClick={this.handleClickGreen}>
-          <div>Like It!</div>
+          <Button color='green' circular onClick={this.handleClickGreen}>
           </Button>
         </div>
       </div>

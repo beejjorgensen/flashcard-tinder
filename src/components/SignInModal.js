@@ -12,7 +12,6 @@ class SignInModal extends Component {
 
     <Modal.Content  image>
       <Modal.Description > 
-      <Image wrapped size='medium' src='assets/study-buddy.jpg' />
         <Header className="modal">GITHUB</Header>
         <Header >GOOGLE +</Header>
         <Header >FACEBOOK</Header>

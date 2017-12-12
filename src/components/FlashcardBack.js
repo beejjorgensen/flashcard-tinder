@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Button } from 'semantic-ui-react';
+import { Card } from 'semantic-ui-react';
 import flashCardData from '../application_data';
 import '../App.css';
 
@@ -28,12 +28,9 @@ class FlashcardBack extends Component {
     return (
       <div>
       <Card className="flashcard">
-        <Card.Header className='flash-head'>
-          Card Number: {this.state.id}
+        <Card.Header>
+          Card Number: 1
         </Card.Header>
-        <Card.Description>
-          {this.state.answer}
-        </Card.Description>
         <Card.Content extra>
           {cards}
         </Card.Content>

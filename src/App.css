@@ -32,12 +32,6 @@ FLASHCARD
   background-color: #D0CDD7;
 }
 
-.description {
-  background-color: #D0CDD7;
-  padding-bottom: .5rem;
-}
-
-
 .buttonField {
   width: 45%;
   margin: 0 auto;
@@ -63,12 +57,10 @@ FLASHPAGE
 /************************************************
 SIGN-IN MODAL
 ************************************************/
-.modal {
-  color: green;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.signup-button {
+  width: 60%;
+  height: 3rem;
 }
 
 /************************************************

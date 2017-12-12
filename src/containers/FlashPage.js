@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import FlashcardFront from '../components/FlashcardFront';
 import FlashcardBack from '../components/FlashcardBack';
 import FlashCardButton from '../components/FlashcardButton';
-import { Reveal, Grid, Image } from 'semantic-ui-react';
+import { Reveal, Grid } from 'semantic-ui-react';
 import '../App.css';
 
 import { connect } from 'react-redux';

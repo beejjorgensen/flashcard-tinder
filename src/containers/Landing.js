@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
 import '../App.css';
 import Language from '../components/Language';
+import SignInModal from '../components/SignInModal';
 import {
   Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
-  List,
   Menu,
   Segment,
   Visibility,
+  Responsive,
+  Modal,
 } from 'semantic-ui-react'
 
 const FixedMenu = () => (
@@ -20,7 +21,23 @@ const FixedMenu = () => (
       <Menu.Item as='a' active>Home</Menu.Item>
       <Menu.Menu position='right'>
         <Menu.Item>
-          <Button as='a' primary>Sign Up</Button>
+          <Modal trigger={<Button as='a' primary>Sign Up</Button>} basic>
+            <Modal.Header>Ace the Dev Interview!</Modal.Header>
+            <Modal.Content>
+              <Modal.Description className='signup-button'>
+                <Button icon labelPosition='left'><Icon name='github' />GITHUB</Button>
+              </Modal.Description>
+              <Modal.Description className='signup-button'>
+                <Button icon labelPosition='left'><Icon name='google' />GOOGLE +</Button>
+              </Modal.Description>
+              <Modal.Description className='signup-button'>
+                <Button icon labelPosition='left'><Icon name='facebook f' />FACEBOOK</Button>
+              </Modal.Description>
+              <Modal.Description className='signup-button'>
+                <Button icon labelPosition='left'><Icon name='signup' />SIGN UP</Button>
+              </Modal.Description>
+            </Modal.Content>
+          </Modal>
         </Menu.Item>
       </Menu.Menu>
     </Container>
@@ -55,7 +72,23 @@ export default class HomepageLayout extends Component {
               <Menu inverted pointing secondary size='large'>
                 <Menu.Item as='a' active>Home</Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted className='SignupButton'>Sign Up</Button>
+                <Modal className='modal' trigger={<Button as='a' inverted>Sign Up</Button>}>
+            <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Ace the Dev Interview!</Modal.Header>
+            <Modal.Content>
+              <Modal.Description className='signup-button'>
+                <Button icon labelPosition='left'><Icon name='github' />GITHUB</Button>
+              </Modal.Description>
+              <Modal.Description className='signup-button'>
+                <Button icon labelPosition='left'><Icon name='google' />GOOGLE +</Button>
+              </Modal.Description>
+              <Modal.Description className='signup-button'>
+                <Button icon labelPosition='left'><Icon name='facebook f' />FACEBOOK</Button>
+              </Modal.Description>
+              <Modal.Description className='signup-button'>
+                <Button icon labelPosition='left'><Icon name='signup' />SIGN UP</Button>
+              </Modal.Description>
+            </Modal.Content>
+          </Modal>
                 </Menu.Item>
               </Menu>
             </Container>
