@@ -1,22 +1,22 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+// const mongoose = require('mongoose');
+// const Schema = mongoose.Schema;
 
 
 
-const CardSchema = new Schema({
-  _id: {
-    type: Number,
-    required: true,
-  },
-  frontCard: {
-    type: String,
-    required: true,
-  },
-  backCard: {
-    type: String, 
-    required: true,
-  },
-});
+// const CardSchema = new Schema({
+//   _id: {
+//     type: Number,
+//     required: true,
+//   },
+//   frontCard: {
+//     type: String,
+//     required: true,
+//   },
+//   backCard: {
+//     type: String, 
+//     required: true,
+//   },
+// });
 
 
 
@@ -48,6 +48,6 @@ const CardSchema = new Schema({
 
 
 
-const Card = mongoose.model('Card', CardSchema);
+// const Card = mongoose.model('Card', CardSchema);
 
-module.exports = Card;
+// module.exports = Card;
