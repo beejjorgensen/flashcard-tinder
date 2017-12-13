@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "cors": "^2.8.4",
+    "mongodb": "^3.0.0-rc0",
     "mongoose": "^4.13.6",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",

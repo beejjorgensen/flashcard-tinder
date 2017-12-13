@@ -1,11 +1,11 @@
 [
   { 
     "id" : "arr1",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "JavaScript",
     "frontcard" : { 
       "item" : "includes()" 
@@ -17,11 +17,11 @@
     }
   }, {
     "id" : "arr2",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "JavaScript",
     "frontcard" : {
       "item" : "indexOf()" 
@@ -33,11 +33,11 @@
     }
   }, {
     "id" : "arr3",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "JavaScript",
     "frontcard" : { 
       "item" : "slice()" 
@@ -49,11 +49,11 @@
     }
   }, {
     "id" : "arr4",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "JavaScript",
     "frontcard" : { 
       "item" : "splice()" 
@@ -65,11 +65,11 @@
     }
   }, {
     "id" : "arr5",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "JavaScript",
     "frontcard" : {
       "item" : "every()" 
@@ -81,11 +81,11 @@
     }
   }, {
     "id" : "str1",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "JavaScript",
     "frontcard" : { 
       "item" : "charAt()" 
@@ -97,11 +97,11 @@
     }
   }, {
     "id" : "str2",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "JavaScript",
     "frontcard" : { 
       "item" : "concat()" 
@@ -113,11 +113,11 @@
     }
   }, {
     "id" : "str3",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "JavaScript",
     "frontcard" : { 
       "item" : "includes()" 
@@ -129,11 +129,11 @@
     }
   }, {
     "id" : "str4",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "JavaScript",
     "frontcard" : { 
       "item" : "slice()" 
@@ -145,11 +145,11 @@
     }
   }, {
     "id" : "str5",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "JavaScript",
     "frontcard" : { 
       "item" : "substr()" 
@@ -161,11 +161,11 @@
     }
   }, {
     "id" : "str6",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "JavaScript",
     "frontcard" : { 
       "item" : "substring()" 
@@ -177,11 +177,11 @@
     }
   }, {
     "id" : "html1",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "HTML",
     "frontcard" : {
       "item" : "template"
@@ -193,11 +193,11 @@
     }
   }, {
     "id" : "css1",
-    "createdBy" : "master"
-    "createdOn" : "2017-12-13T09:04:06"
-    "modifiedBy" : "master"
-    "modifiedOn" : "2017-12-13T09:04:06"
-    "group" : "master"
+    "createdBy" : "master",
+    "createdOn" : "2017-12-13T09:52:28",
+    "modifiedBy" : "master",
+    "modifiedOn" : "2017-12-13T09:52:28",
+    "group" : "master",
     "category" : "CSS3",
     "frontcard" : {
       "item" : "components"
