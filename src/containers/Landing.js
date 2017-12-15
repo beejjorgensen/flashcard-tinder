@@ -13,7 +13,10 @@ import {
   Visibility,
   Responsive,
   Modal,
+  Image
 } from 'semantic-ui-react'
+
+const felix = '../assets/Felix_the_Cat.png'
 
 const FixedMenu = () => (
   <Menu fixed='top' size='large'>
@@ -22,19 +25,34 @@ const FixedMenu = () => (
       <Menu.Menu position='right'>
         <Menu.Item>
           <Modal trigger={<Button as='a' primary>Sign Up</Button>} basic>
-            <Modal.Header>Ace the Dev Interview!</Modal.Header>
+            <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Ace the Dev Interview!</Modal.Header>
+            <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }><h3>Sign Up to Get Started!</h3></Modal.Header>
             <Modal.Content>
-              <Modal.Description className='signup-button'>
-                <Button icon labelPosition='left'><Icon name='github' />GITHUB</Button>
+              <Modal.Description>
+              <div className="btn-Signup">
+              <Button.Group className='btn-social' vertical>
+                <Button icon labelPosition='left' color='black' compact><Icon name='github' />GITHUB</Button>
+                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' />GOOGLE +</Button>
+                <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' />FACEBOOK</Button>
+                <Button icon labelPosition='left' color='teal' compact><Icon name='signup' />SIGN IN</Button>
+                </Button.Group>
+              </div>
               </Modal.Description>
-              <Modal.Description className='signup-button'>
-                <Button icon labelPosition='left'><Icon name='google' />GOOGLE +</Button>
-              </Modal.Description>
-              <Modal.Description className='signup-button'>
-                <Button icon labelPosition='left'><Icon name='facebook f' />FACEBOOK</Button>
-              </Modal.Description>
-              <Modal.Description className='signup-button'>
-                <Button icon labelPosition='left'><Icon name='signup' />SIGN UP</Button>
+            </Modal.Content>
+          </Modal>
+        </Menu.Item>
+        <Menu.Item>
+          <Modal trigger={<Button as='a' secondary>Log In</Button>} basic>
+          <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Log In With</Modal.Header>
+          <Modal.Content>
+              <Modal.Description>
+              <div className="btn-Signup">
+              <Button.Group className='btn-social' vertical style={ { display: 'flex', justifyContent: 'center' } }>
+                <Button icon labelPosition='left' color='black' compact><Icon name='github' />GITHUB</Button>
+                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' />GOOGLE +</Button>
+                <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' />FACEBOOK</Button>
+                </Button.Group>
+              </div>
               </Modal.Description>
             </Modal.Content>
           </Modal>
@@ -72,34 +90,53 @@ export default class HomepageLayout extends Component {
               <Menu inverted pointing secondary size='large'>
                 <Menu.Item as='a' active>Home</Menu.Item>
                 <Menu.Item position='right'>
-                <Modal className='modal' trigger={<Button as='a' inverted>Sign Up</Button>}>
+                <Modal className='modal' trigger={<Button as='a' inverted>Sign Up</Button>} basic>
             <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Ace the Dev Interview!</Modal.Header>
+            <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }><h3>Sign Up to Get Started!</h3></Modal.Header>
             <Modal.Content>
-              <Modal.Description className='signup-button'>
-                <Button icon labelPosition='left'><Icon name='github' />GITHUB</Button>
-              </Modal.Description>
-              <Modal.Description className='signup-button'>
-                <Button icon labelPosition='left'><Icon name='google' />GOOGLE +</Button>
-              </Modal.Description>
-              <Modal.Description className='signup-button'>
-                <Button icon labelPosition='left'><Icon name='facebook f' />FACEBOOK</Button>
-              </Modal.Description>
-              <Modal.Description className='signup-button'>
-                <Button icon labelPosition='left'><Icon name='signup' />SIGN UP</Button>
+              <Modal.Description>
+              <div className="btn-Signup">
+              <Button.Group className='btn-social' vertical>
+                <Button icon labelPosition='left' color='black' compact><Icon name='github' />GITHUB</Button>
+                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' />GOOGLE +</Button>
+                <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' />FACEBOOK</Button>
+                <Button icon labelPosition='left' color='teal' compact><Icon name='signup' />SIGN IN</Button>
+                </Button.Group>
+              </div>
               </Modal.Description>
             </Modal.Content>
           </Modal>
-                </Menu.Item>
-              </Menu>
-            </Container>
+        </Menu.Item>
+        <Menu.Item>
+          <Modal trigger={<Button as='a' primary>Log In</Button>} basic>
+          <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Log In With</Modal.Header>
+          <Modal.Content>
+              <Modal.Description>
+              <div className="btn-Signup">
+              <Button.Group className='btn-social' vertical>
+                <Button icon labelPosition='left' color='black' compact><Icon name='github' />GITHUB</Button>
+                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' />GOOGLE +</Button>
+                <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' />FACEBOOK</Button>
+              </Button.Group>
+              </div>
+              </Modal.Description>
+            </Modal.Content>
+          </Modal>
+        </Menu.Item>
+        </Menu>
+        </Container>
 
             <Container text>
               <Header
                 as='h1'
                 content='Welcome to Studdy Buddy!'
                 inverted
-                style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '3em' }}
+                style={{ fontSize: '4em', fontWeight: 'normal', marginBottom: 0, marginTop: '.5em' }}
               />
+
+              <Segment basic>
+                <Image src={felix} size='small' centered />
+              </Segment>
               <Header
                 as='h2'
                 content='Learn some languages.'

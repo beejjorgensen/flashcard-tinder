@@ -130,7 +130,7 @@ Language Components
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 75px;
+  padding-top: 0.5em;
 }
 
 .typewriter h1 {
@@ -185,6 +185,20 @@ LANDING PAGE
   padding: 1em 0em;
 }
 
+.btn-Signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-social {
+  width: 250px;
+}
+
+.btn-git {
+  margin-bottom: 1em;
+}
 
 /************************************************
 MENUBAR
