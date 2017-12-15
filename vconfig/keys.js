@@ -7,5 +7,8 @@ module.exports = {
   },
   mongodb: {
     dbURI:'mongodb://localhost/cardsTest' // switch to mLab for production
+  },
+  session: {
+    cookieKey:'Lambda1#'
   }
 }; 

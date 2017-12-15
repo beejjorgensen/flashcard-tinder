@@ -42,20 +42,25 @@
     <nav>
       <ul>
           <% if (user) { %>
-          <li><a href="/auth/logout">LOGOUT</a></li>
-          <% } else { %>
-          <li><a href="/auth/login">LOGIN</a></li>
-          <% } %>
-          <li><a href="/">HOMEPAGE</a></li>
-          <li><a href="/profile">PROFILE</a></li>
+            <li><a href="/auth/logout">LOGOUT</a></li>
+            <% } else { %>
+            <li><a href="/auth/login">LOGIN</a></li>
+            <% } %>
+            <li><a href="/">HOMEPAGE</a></li>
+            <li><a href="/profile">PROFILE</a></li>
       </ul>
     </nav>
     <header>
-      <h1>Studdy Buddy OAUTH</h1>
-      <h2>Homepage</h2>
+      <h1>Welcome to your profile, <%= user.username %>!</h1>
     </header>
     <main> 
-      <p> Possibbly the Best Studdy Buddy on the Planet! :) </p>
+      <p>
+        Extra information about you!
+        We can take info from their google/fb profile
+        or create new statistics from studdy buddy usage.
+      </p>
+      <img src="<%= user.thumbnail %>" />
+      <p>This is your profile thumbnail</p>
     </main>
   </body>
 </html>
