@@ -1,5 +1,5 @@
 /*
- flashcards.js ver. 1.0.0
+ flashcards.js ver. 1.0.1
  2017-12-13T11:24:48
  pinecone062@gmail.com
  ------------------------------------------------------------
@@ -13,12 +13,14 @@
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const fs = require('fs');
+const local = process.argv[2];
+console.log(`local: ${local}`);
 
 // FLASHCARDS_JSON
 const FLASHCARDS_JSON = './flashcards.json';
 
 // MONGODB_URI
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = local === 'local' ? 'mongodb://localhost:27017' :  process.env.MONGODB_URI;
 const DISPLAYABLE_URI = MONGODB_URI.replace(/:[^:]*@/, ':<PASSWORD>@');
 
 // DATABASE AND COLLECTION
