@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
-// import flashCardData from '../application_data';
+import '../App.css';
 
 class FlashCardButton extends Component {
   constructor(props) {
     super(props);
     this.state = {
       red: [],
-      green: []
+      green: [],
+      yellow: [],
     };
 
   };
@@ -26,21 +27,22 @@ class FlashCardButton extends Component {
     });
   }
 
+  handleClickYellow = (flashCardId) => {
+    console.log(flashCardId + ' yellow was clicked!')
+    this.setState({
+      yellow: this.state.yellow
+    });
+  }
+
   render() {
     return (
       <div>
-        <div className='flash-card'>
-          {this.props.question}
-        </div>
-        <div>
-          {this.props.answer}
-        </div>
-        <div>
-          <Button color='red' circular onClick={this.handleClickRed}>
-          </Button>
-          <Button color='green' circular onClick={this.handleClickGreen}>
-          </Button>
-        </div>
+        <Button color='red' circular onClick={this.handleClickRed} style={ { margin: '0 1rem 0 0', height: '5rem', width: '5rem' } }>
+        </Button>
+        <Button color='yellow' circular onClick={this.handleClickYellow} style={ { margin: '0 1rem 0 1rem', height: '5rem', width: '5rem' } }>
+        </Button>
+        <Button color='green' circular onClick={this.handleClickGreen} style={ { margin: '0 0 0 1rem', height: '5rem', width: '5rem' } }>
+        </Button>
       </div>
     );
   }

@@ -150,7 +150,7 @@ export default class HomepageLayout extends Component {
             </Container>
           </Segment>
         </Visibility>
-        <a id="languages">
+        <a id='languages'>
           <Segment style={{ padding: '8em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
               <Grid.Row>
