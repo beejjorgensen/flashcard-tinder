@@ -6,6 +6,8 @@ MAIN
   width: 100%;
   min-height: 100%;
   background-color: #0B3948;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .container {
@@ -32,12 +34,9 @@ FLASHCARD
   background-color: #D0CDD7;
 }
 
-.buttonField {
-  width: 45%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.flash-buttons {
+  margin-top: 1rem;
+  padding: 0, 0.5rem, 0, 0.5rem;
 }
 
 
