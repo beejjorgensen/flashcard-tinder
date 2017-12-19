@@ -19,8 +19,8 @@ class JavaScript extends Component {
           </div>
           <ul className="category-list">
              <a href="/flashpage"><li>Overview</li></a>
-             <a href=""><li>Basic Concepts</li></a>
-             <a href=""><li>Conditions and Loops</li></a>
+             <a href="/flashpage"><li>Basic Concepts</li></a>
+             <a href="/flashpage"><li>Conditions and Loops</li></a>
              <a href=""><li>Functions</li></a>
              <a href=""><li>Data Structures</li></a>
              <a href=""><li>Objects</li></a>

@@ -6,7 +6,8 @@ module.exports = {
     clientSecret: 'guZrNHg-rLtingc-hbCBbPle'
   },
   mongodb: {
-    dbURI:'mongodb://localhost/cardsTest' // switch to mLab for production
+    dbURI:'mongodb://localhost/cardsTest' // switch to mLab for production 
+    // dbURI: process.env.MONGODB_URI/heroku_j6hzksz4
   },
   session: {
     cookieKey:'Lambda1#'

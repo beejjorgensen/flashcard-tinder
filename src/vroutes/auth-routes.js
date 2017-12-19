@@ -22,7 +22,8 @@ router.get('/google', passport.authenticate('google', {
 router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
   // you reached the callback URI. What page route do we want to display upon a successful login?
   // res.send(req.user);
-  res.redirect('/profile/');
+  res.redirect('/');
+  // res.redirect('/profile/');
 });
 
 module.exports = router;
