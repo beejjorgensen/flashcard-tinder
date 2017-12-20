@@ -13,6 +13,11 @@ const cors = require('cors');
 const app = express();
 const PORT = 3001;
 
+// Express only serves static assets in production
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("./build"));
+}
+
 app.use(bodyParser.json());
 const corsOptions = {
   "origin": "http://localhost:3001",
@@ -24,7 +29,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // set up temporary view engine. remove once we connect to actual frontend
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
 app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000,
