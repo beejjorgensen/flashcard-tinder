@@ -5,10 +5,10 @@ import '../App.css'
 class Language extends Component {
     render() {
     	return (
-				<div>
+				<div className='landingPage'>
 				  <div className="typewriter-container">
 						<div className="typewriter">
-							<h1>Choose a language and start learning now!</h1>
+							<h1 id='languageText'>Choose a language and start learning now!</h1>
 						</div>
 					</div>
             <div className="lang-container">

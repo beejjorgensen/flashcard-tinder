@@ -15,13 +15,12 @@ class FlashPage extends Component {
       frontCard: ['includes()', 'indexOf()', 'slice()'],
       backCard: ['includes() determines whether an array includes a certain element. returns TRUE or FALSE.', 'ndexOf() returns the first index at which a given element can be found in the array. Returns -1 if it is not found.', 'slice() returns a shallow COPY of a portion of an array into a new array object selected from BEGIN (Inclusive) to END (Non-Inclusive). ORIGINAL ARRAY NOT MUTATED.' ]
     }
+    this.handleClickGreen = this.handleClickGreen.bind(this);
   }
 
-  componentDidMount() {
-    this.props.fetchCards();
+  handleClickGreen() {
+    this.state.frontCard[+1];
   }
-
-  
 
   render() {
     return (

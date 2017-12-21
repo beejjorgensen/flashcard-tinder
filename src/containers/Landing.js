@@ -72,7 +72,7 @@ export default class HomepageLayout extends Component {
     const { visible } = this.state
 
     return (
-      <div>
+      <div className='landingPage'>
         { visible ? <FixedMenu /> : null }
 
         <Visibility
