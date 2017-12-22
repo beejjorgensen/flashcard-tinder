@@ -11,7 +11,7 @@ import {
   Menu,
   Segment,
   Visibility,
-  Responsive,
+  // Responsive,
   Modal,
   Image
 } from 'semantic-ui-react'
@@ -32,7 +32,7 @@ const FixedMenu = () => (
               <div className="btn-Signup">
               <Button.Group className='btn-social' vertical>
                 <Button icon labelPosition='left' color='black' compact><Icon name='github' />GITHUB</Button>
-                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' />GOOGLE +</Button>
+                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /> <a href="/auth/google">GOOGLE+</a>GOOGLE +</Button>
                 <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' />FACEBOOK</Button>
                 <Button icon labelPosition='left' color='teal' compact><Icon name='signup' />SIGN IN</Button>
                 </Button.Group>
@@ -48,9 +48,9 @@ const FixedMenu = () => (
               <Modal.Description>
               <div className="btn-Signup">
               <Button.Group className='btn-social' vertical style={ { display: 'flex', justifyContent: 'center' } }>
-                <Button icon labelPosition='left' color='black' compact><Icon name='github' /><a href="/login">GITHUB TEST</a></Button>
-                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /><a href="/auth/login">GOOGLE TEST</a></Button>
-                <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' /><a href="/signIn">FACEBOOK TEST</a></Button>
+                <Button icon labelPosition='left' color='black' compact><Icon name='github' />       <a href="/login">GITHUB TEST</a></Button>
+                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /> <a href="/auth/google">GOOGLE+</a></Button>
+                <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' /> <a href="/signIn">FACEBOOK TEST</a></Button>
                 </Button.Group>
               </div>
               </Modal.Description>
@@ -98,7 +98,7 @@ export default class HomepageLayout extends Component {
               <div className="btn-Signup">
               <Button.Group className='btn-social' vertical>
                 <Button icon labelPosition='left' color='black' compact><Icon name='github' />GITHUB</Button>
-                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' />GOOGLE +</Button>
+                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /> <a href="/auth/google">GOOGLE+</a></Button>
                 <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' />FACEBOOK</Button>
                 <Button icon labelPosition='left' color='teal' compact><Icon name='signup' />SIGN IN</Button>
                 </Button.Group>
@@ -115,7 +115,7 @@ export default class HomepageLayout extends Component {
               <div className="btn-Signup">
               <Button.Group className='btn-social' vertical>
                 <Button icon labelPosition='left' color='black' compact><Icon name='github' />GITHUB</Button>
-                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' />GOOGLE +</Button>
+                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /><a href="/auth/google">GOOGLE+</a></Button>
                 <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' />FACEBOOK</Button>
               </Button.Group>
               </div>

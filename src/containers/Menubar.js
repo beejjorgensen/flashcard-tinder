@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FlashPage from './FlashPage';
-import { Sidebar, Button, Menu, Image, Icon } from 'semantic-ui-react';
+import { Sidebar, Button, Menu, Icon } from 'semantic-ui-react';
 import '../App.css';
 
 class Menubar extends Component {

@@ -6,8 +6,8 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import promise from 'redux-promise';
 import reducers from './reducers';
-import Navigation from './components/Navigation';
-import Language from './components/Language';
+// import Navigation from './components/Navigation';
+// import Language from './components/Language';
 import JavaScript from './components/Javascript';
 import Landing from './containers/Landing';
 import Menubar from './containers/Menubar';
@@ -16,7 +16,7 @@ import TEST from './components/TEST';
 
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
-const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+// const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>

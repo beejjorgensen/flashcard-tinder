@@ -29,7 +29,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // set up temporary view engine. remove once we connect to actual frontend
-// app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
 app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000,
