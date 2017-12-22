@@ -14,9 +14,9 @@ const app = express();
 const PORT = 3001;
 
 // Express only serves static assets in production
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("./build"));
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static("./build"));
+// }
 
 app.use(bodyParser.json());
 const corsOptions = {
@@ -28,9 +28,10 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-// set up temporary view engine. remove once we connect to actual frontend
+// set up temporary view engine. remove once we fully connect to frontend
 app.set('view engine', 'ejs');
 
+// cookie session age
 app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000,
   keys: [keys.session.cookieKey]
@@ -45,7 +46,7 @@ mongoose.connect(keys.mongodb.dbURI, {useMongoClient: true}, (err) => {
   console.log('Connected to FlashCards DataBase from app.js!');
 });
 
-// set up routes
+// set up auth routes
 app.use('/auth', authRoutes);
 app.use('/profile', profileRoutes);
 

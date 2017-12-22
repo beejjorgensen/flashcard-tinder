@@ -24,7 +24,7 @@ const FixedMenu = () => (
       <Menu.Item as='a' active>Home</Menu.Item>
       <Menu.Menu position='right'>
         <Menu.Item>
-          <Modal trigger={<Button as='a' primary>LANDING 2 SIGNUP </Button>} basic>
+          <Modal trigger={<Button as='a' primary>SIGNUP</Button>} basic>
             <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Ace the Dev Interview!</Modal.Header>
             <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }><h3>Sign Up to Get Started!</h3></Modal.Header>
             <Modal.Content>
@@ -32,7 +32,7 @@ const FixedMenu = () => (
               <div className="btn-Signup">
               <Button.Group className='btn-social' vertical>
                 <Button icon labelPosition='left' color='black' compact><Icon name='github' />GITHUB</Button>
-                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /> <a href="/auth/google">GOOGLE+</a>GOOGLE +</Button>
+                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /> <a href="/auth/google">GOOGLE+</a></Button>
                 <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' />FACEBOOK</Button>
                 <Button icon labelPosition='left' color='teal' compact><Icon name='signup' />SIGN IN</Button>
                 </Button.Group>
@@ -42,7 +42,7 @@ const FixedMenu = () => (
           </Modal>
         </Menu.Item>
         <Menu.Item>
-          <Modal trigger={<Button as='a' secondary>LANDING 2 Log In</Button>} basic>
+          <Modal trigger={<Button as='a' secondary>Log In</Button>} basic>
           <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Log In With</Modal.Header>
           <Modal.Content>
               <Modal.Description>
@@ -90,7 +90,7 @@ export default class HomepageLayout extends Component {
               <Menu inverted pointing secondary size='large'>
                 <Menu.Item as='a' active>Home</Menu.Item>
                 <Menu.Item position='right'>
-                <Modal className='modal' trigger={<Button as='a' inverted>LANDING 1 Sign Up</Button>} basic>
+                <Modal className='modal' trigger={<Button as='a' inverted>Sign Up</Button>} basic>
             <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Ace the Dev Interview!</Modal.Header>
             <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }><h3>Sign Up to Get Started!</h3></Modal.Header>
             <Modal.Content>
@@ -98,7 +98,7 @@ export default class HomepageLayout extends Component {
               <div className="btn-Signup">
               <Button.Group className='btn-social' vertical>
                 <Button icon labelPosition='left' color='black' compact><Icon name='github' />GITHUB</Button>
-                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /> <a href="/auth/google">GOOGLE+</a></Button>
+                <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /><a href="/auth/google">GOOGLE+</a></Button>
                 <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' />FACEBOOK</Button>
                 <Button icon labelPosition='left' color='teal' compact><Icon name='signup' />SIGN IN</Button>
                 </Button.Group>
