@@ -11,9 +11,6 @@ import reducers from './reducers';
 import JavaScript from './components/Javascript';
 import Landing from './containers/Landing';
 import Menubar from './containers/Menubar';
-// TESTING COMPONENT
-import TEST from './components/TEST';
-
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 // const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
@@ -25,8 +22,6 @@ ReactDOM.render(
         <Route path="/javascript" component={JavaScript} />
         <Route path="/flashPage" component={Menubar} />
         <Route exact path="/" component={Landing} />
-        <Route path="/test" component={TEST} />
-        
       </div>
     </BrowserRouter>
   </Provider>

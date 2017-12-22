@@ -9,6 +9,7 @@
 # production
 /build
 /cardsTest
+/keys.js
 
 # misc
 .DS_Store
