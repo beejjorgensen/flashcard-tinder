@@ -24,7 +24,7 @@ export const FixedMenu = () => (
       <Menu.Item as='a' href="/">Home</Menu.Item>
       <Menu.Menu position='right'>
         <Menu.Item>
-          <Modal trigger={<Button as='a' primary>SIGNUP</Button>} basic>
+          <Modal trigger={<Button as='a' primary>Sign Up</Button>} basic>
             <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Ace the Dev Interview!</Modal.Header>
             <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }><h3>Sign Up to Get Started!</h3></Modal.Header>
             <Modal.Content>
