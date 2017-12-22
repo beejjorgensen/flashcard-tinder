@@ -5,9 +5,13 @@ MAIN
 .App {
   width: 100%;
   min-height: 100%;
-  background-color: #0B3948;
+  background-color: #1b1c1d;
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -21,17 +25,60 @@ MAIN
 /************************************************
 FLASHCARD
 ************************************************/
-
-.flashcard {
-  height: 20rem;
-  margin-top: 1.5rem;
-  background-color: #D9DBF1;
+.card-container {
+  cursor: pointer;
+  height: 25rem;
+  width: 25rem;
+  perspective: 100rem;
+  position: relative;
+  margin: auto;
+  margin-bottom: 5rem;
+  transition: ease-in;
 }
 
-.flash-head {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  background-color: #D0CDD7;
+.card {
+  height: 25rem;
+  width: 25rem;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 0.4s ease-in-out;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+  transition: all 0.4s ease-in-out;
+}
+
+.card .front {
+  height: 25rem;
+  width: 25rem;
+  backface-visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  background-color: rgba(255,251,251, 1);
+}
+
+.card .back {
+  height: 25rem;
+  width: 25rem;
+  text-align: center;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transform: rotateY(180deg);
+  background-color: rgba(255,251,251, 1);
+}
+
+.frontCard {
+  color: #333333;
+  font-size: 2.3rem;
+  padding-top: 10%;
+}
+
+.backCard {
+  color: #333333;
+  font-size: 1rem;
+  padding-top: 20%;
 }
 
 .flash-buttons {
@@ -50,6 +97,14 @@ FLASHPAGE
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.cardRow {
+  padding: 0.3125rem;
+}
+
+.btnRow {
+  padding: 0.3125rem;
 }
 
 
