@@ -41,9 +41,10 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
+//
 mongoose.connect(keys.mongodb.dbURI, {useMongoClient: true}, (err) => {
   if (err) return console.log(err);
-  console.log('Connected to FlashCards DataBase from app.js!');
+  console.log('Connected to FlashCards DataBase from Server.js!');
 });
 
 // set up auth routes
