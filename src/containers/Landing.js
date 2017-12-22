@@ -108,7 +108,7 @@ export default class HomepageLayout extends Component {
           </Modal>
         </Menu.Item>
         <Menu.Item>
-          <Modal trigger={<Button as='a' primary>LANDING 1 Log In</Button>} basic>
+          <Modal trigger={<Button as='a' primary>Log In</Button>} basic>
           <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Log In With</Modal.Header>
           <Modal.Content>
               <Modal.Description>
