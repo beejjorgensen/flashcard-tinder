@@ -20,11 +20,11 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
+  <Provider store={ store }>
     <BrowserRouter>
       <div className="App">
         <Route path="/javascript" component={JavaScript} />
-        <Route path="/flashPage" component={Menubar} />
+        <Route path="/flashPage" component={App} />
         <Route path="/signIn" component={SignInModal} />
         <Route exact path="/" component={Landing} />
       </div>

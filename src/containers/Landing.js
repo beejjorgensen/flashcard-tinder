@@ -18,10 +18,10 @@ import {
 
 const felix = '../assets/Felix_the_Cat.png'
 
-const FixedMenu = () => (
-  <Menu fixed='top' size='large'>
+export const FixedMenu = () => (
+  <Menu  inverted fixed='top' size='large'>
     <Container>
-      <Menu.Item as='a' active>Home</Menu.Item>
+      <Menu.Item as='a' href="/">Home</Menu.Item>
       <Menu.Menu position='right'>
         <Menu.Item>
           <Modal trigger={<Button as='a' primary>Sign Up</Button>} basic>
@@ -72,7 +72,7 @@ export default class HomepageLayout extends Component {
     const { visible } = this.state
 
     return (
-      <div>
+      <div className='landingPage'>
         { visible ? <FixedMenu /> : null }
 
         <Visibility
@@ -150,7 +150,7 @@ export default class HomepageLayout extends Component {
             </Container>
           </Segment>
         </Visibility>
-        <a id="languages">
+        <a id='languages'>
           <Segment style={{ padding: '8em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
               <Grid.Row>
