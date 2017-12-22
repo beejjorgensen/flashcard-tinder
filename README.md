@@ -1,5 +1,5 @@
 # Flashcard Tinder
-## Created by Wesley, Stevie, Latoyya, Dan, and John
+## Created by Latoyya, Wesley, Dan, John, and Stevie :)
 
 ### Built using:
 
