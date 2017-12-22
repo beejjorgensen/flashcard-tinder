@@ -20,10 +20,10 @@ class FlashcardBack extends Component {
   }
 
   render() {
-    // const flashCard = flashCardData[0];
     const cards = this.state.cards.map(card => {
       return <div key={card._id}>{card.backCard}</div>
     });
+
     return (
       <div>
       <Card className="flashcard">
@@ -31,7 +31,7 @@ class FlashcardBack extends Component {
           Card Number: 1
         </Card.Header>
         <Card.Content extra>
-          {cards}
+          {this.state.cards[0]}
         </Card.Content>
       </Card>
       </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import FlashPage from './FlashPage';
-import { Sidebar, Button, Menu, Icon } from 'semantic-ui-react';
+import App from '../App';
+import { Sidebar, Button, Menu, Image, Icon } from 'semantic-ui-react';
 import '../App.css';
 
 class Menubar extends Component {
@@ -41,7 +41,7 @@ class Menubar extends Component {
               Subjects
             </Menu.Item>
           </Sidebar>
-            <FlashPage />
+            <App />
         </Sidebar.Pushable>
       </div>
     )

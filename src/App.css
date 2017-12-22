@@ -5,7 +5,13 @@ MAIN
 .App {
   width: 100%;
   min-height: 100%;
-  background-color: #0B3948;
+  background-color: #1b1c1d;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
@@ -19,25 +25,65 @@ MAIN
 /************************************************
 FLASHCARD
 ************************************************/
-
-.flashcard {
-  height: 20rem;
-  margin-top: 1.5rem;
-  background-color: #D9DBF1;
+.card-container {
+  cursor: pointer;
+  height: 25rem;
+  width: 25rem;
+  perspective: 100rem;
+  position: relative;
+  margin: auto;
+  margin-bottom: 5rem;
+  transition: ease-in;
 }
 
-.flash-head {
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  background-color: #D0CDD7;
+.card {
+  height: 25rem;
+  width: 25rem;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 0.4s ease-in-out;
 }
 
-.buttonField {
-  width: 45%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.card:hover {
+  transform: rotateY(180deg);
+  transition: all 0.4s ease-in-out;
+}
+
+.card .front {
+  height: 25rem;
+  width: 25rem;
+  backface-visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  background-color: rgba(255,251,251, 1);
+}
+
+.card .back {
+  height: 25rem;
+  width: 25rem;
+  text-align: center;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transform: rotateY(180deg);
+  background-color: rgba(255,251,251, 1);
+}
+
+.frontCard {
+  color: #333333;
+  font-size: 2.3rem;
+  padding-top: 10%;
+}
+
+.backCard {
+  color: #333333;
+  font-size: 1rem;
+  padding-top: 20%;
+}
+
+.flash-buttons {
+  margin-top: 1rem;
+  padding: 0, 0.5rem, 0, 0.5rem;
 }
 
 
@@ -51,6 +97,14 @@ FLASHPAGE
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.cardRow {
+  padding: 0.3125rem;
+}
+
+.btnRow {
+  padding: 0.3125rem;
 }
 
 
@@ -68,7 +122,7 @@ Category Components
 ************************************************/
 .category-header {
   color: #FFF;
-  font-size: 60px;
+  font-size: 3.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,7 +130,7 @@ Category Components
 }
 
 .category{
-  margin-top: -50px;
+  margin-top: -3.125rem;
 }
 
 .category-icon {
@@ -84,41 +138,47 @@ Category Components
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 1.875rem;
 }
 
 ul {
-  list-style-type: none;
-  width: 50%;
+  width: 100%;
+  display: inline-block;
+  flex-direction: column;
+  flex-flow: wrap;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  position: relative;
 }
 
-li {
-  display: inline-block;
+ul a {
+  list-style: none;
+  /* display: inline-block; */
+  color: #000000;
   border: 1px solid #F7E018;
   border-radius: 1rem;
   background-color: #F7E018;
-  margin-top: 10px;
-  margin-right: 10px;
-  padding: 10px;
-  font-size: 1.5vw;
+  margin: 0.625rem;
+  padding: 0.625rem;
   font-weight: bold;
-  width: 45%;
+  font-size: 1.5rem;
+  width: 60%;
   text-align: center;
-  
 }
 
-.btn-back {
+#btn-back {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-a {
-  color: #000;
+.category-list {
+  display: flex;
+  flex-flow: wrap;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /************************************************
@@ -126,19 +186,22 @@ Language Components
 ************************************************/
 
 .typewriter-container {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 0.5em;
+  text-align: center;
 }
 
 .typewriter h1 {
+  width: 100%;
   color: #fff;
   font-family: 'Space Mono', monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid #fff; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
+  white-space: normal; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
@@ -158,17 +221,23 @@ Language Components
   50% { border-color: #FFF }
 }
 .lang-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 75px;
+  padding-top: 4.6875rem;
+  text-align: center;
 }
 
 .btnTopic {
   background-color: transparent;
   border: none;
   cursor: pointer;
+}
+
+.languageText {
+  width: 100%;
 }
 
 
@@ -198,6 +267,11 @@ LANDING PAGE
 
 .btn-git {
   margin-bottom: 1em;
+}
+
+.landingPage {
+  width: 100%;
+  height: 100%;
 }
 
 /************************************************

@@ -4,7 +4,7 @@ export const FETCH_FLASHCARDS = 'fetch_flashcards';
 
 const ROOT_URL = 'http://localhost:8080';
 
-export function fetchCards() {
+export const fetchCards = () => {
   const request = axios.get(`${ROOT_URL}/cards`)
 
   return {

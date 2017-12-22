@@ -20,8 +20,8 @@ class FlashcardFront extends Component {
   }
 
   render() {
-    const cards = this.state.cards.map(card => {
-      return <div key={card._id}>{card.frontCard}</div>
+    const cards = this.state.cards.forEach((card) => {
+      return <div key={card._id}>{card.frontcard}</div>
     });
     return (
       <div>
@@ -30,8 +30,9 @@ class FlashcardFront extends Component {
             Card Number: 1
           </Card.Header>
           <Card.Content extra>
-            {cards}
-            {console.log('JSX Return statement', cards)}
+            {/* {cards} */}
+            {/* {console.log('JSX Return statement', cards)} */}
+            includes()
           </Card.Content>
         </Card>
       </div>
