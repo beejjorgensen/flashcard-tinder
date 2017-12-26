@@ -56,6 +56,7 @@ app.get('/', (req, res) => {
   res.render('home', { user: req.user});
 });
 
+
 // create calls to cards db
 app.post('/cards', (req, res) => {
   const { _id, frontCard, backCard } = req.body;
