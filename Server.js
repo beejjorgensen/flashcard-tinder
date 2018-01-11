@@ -1,24 +1,41 @@
 const express = require('express');
-const authRoutes = require('./api/routes/auth-routes');
-const profileRoutes = require('./api/routes/profile-routes');
-const passportSetup = require('./api/config/passport-setup');
 const mongoose = require('mongoose');
-const keys = require('./api/config/keys');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const bodyParser = require('body-parser');
+const keys = require('./api/config/keys');
+
+// const profileRoutes = require('./api/routes/profile-routes');
+const passportSetup = require('./api/config/passport-setup');
 const Card = require('./api/models/card-model.js');
 const cors = require('cors');
 
+mongoose.Promise = global.Promise;
+// mongoose.connect(keys.mongoURI);
+
 const app = express();
 const PORT = 3001;
+app.use(bodyParser.json());
+
+// cookie session age
+app.use(
+    cookieSession({
+    maxAge: 24 * 60 * 60 * 1000,
+    keys: [keys.session.cookieKey]
+  })
+);
+
+// initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./api/routes/auth-routes')(app);
 
 // Express only serves static assets in production
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("./public/build"));
 }
 
-app.use(bodyParser.json());
 const corsOptions = {
   "origin": "http://localhost:3001",
   "methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
@@ -31,30 +48,22 @@ app.use(cors(corsOptions));
 // set up temporary view engine. remove once we fully connect to frontend
 app.set('view engine', 'ejs');
 
-// cookie session age
-app.use(cookieSession({
-  maxAge: 24 * 60 * 60 * 1000,
-  keys: [keys.session.cookieKey]
-}));
 
-// initialize passport
-app.use(passport.initialize());
-app.use(passport.session());
 
-//
+
 mongoose.connect(keys.mongodb.dbURI, {useMongoClient: true}, (err) => {
   if (err) return console.log(err);
   console.log('Connected to FlashCards DataBase from Server.js!');
 });
 
 // set up auth routes
-app.use('/auth', authRoutes);
-app.use('/profile', profileRoutes);
+// app.use('/auth', authRoutes);
+// app.use('/profile', profileRoutes);
 
 // create home route
-app.get('/', (req, res) => {
-  res.render('home', { user: req.user});
-});
+// app.get('/', (req, res) => {
+//   res.render('home', { user: req.user});
+// });
 
 
 // create calls to cards db

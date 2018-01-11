@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import FlashCard from './FlashCard';
 import DrawButton from '../components/FlashcardButton';
-import { FixedMenu } from './Landing';
+import FixedMenu from './FixedMenu';
 import '../App.css';
 
 

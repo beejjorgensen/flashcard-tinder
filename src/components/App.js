@@ -4,14 +4,16 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import Header from './Header';
-import Landing from '../containers/Landing';
+import FixedMenu from '../containers/FixedMenu';
+import HomePageLayout from '../containers/HomePageLayout';
 import JavaScript from './Javascript';
 import FlashPage from '../containers/FlashPage';
 
 
 class App extends Component {
   componentDidMount() {
-    // this.props.fetchUser();
+     this.props.fetchUser();
+     console.log('this.props.fetchUser()', this.props.fetchUser());
   }
 
   render() {
@@ -20,7 +22,9 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Header />
-            <Route exact path="/" component={Landing} />
+            <FixedMenu />
+            <Route exact path="/" component={HomePageLayout} />
+
             {/* <Route exact path="/currentUser" component={CurrentUser} /> */}
             <Route exact path="/javascript" component={JavaScript} />
             <Route path="/flashPage" component={FlashPage} />
