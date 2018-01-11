@@ -37,11 +37,11 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const corsOptions = {
-  "origin": "http://localhost:3001",
-  "methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
-  "preflightContinue": true,
-  "optionsSuccessStatus": 204,
-  "credentials": true // enable set cookie
+  // "origin": "http://localhost:3000",
+  // "methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
+  // "preflightContinue": true,
+  // "optionsSuccessStatus": 204,
+  // "credentials": true // enable set cookie
 };
 app.use(cors(corsOptions));
 

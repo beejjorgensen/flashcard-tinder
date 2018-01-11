@@ -13,7 +13,7 @@ import FlashPage from '../containers/FlashPage';
 class App extends Component {
   componentDidMount() {
      this.props.fetchUser();
-     console.log('this.props.fetchUser()', this.props.fetchUser());
+     console.log('this.props.fetchUser()', this.props);
   }
 
   render() {
@@ -35,4 +35,8 @@ class App extends Component {
   }
 }
 
-export default connect(null, actions)(App);
+const mapStateToProps = (state) => {
+  console.log('MAPSTATETOPROPS', state);
+  return {auth: state.auth}
+}
+export default connect(mapStateToProps, actions)(App);

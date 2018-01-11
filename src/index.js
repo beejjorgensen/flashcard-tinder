@@ -9,13 +9,13 @@ import reducers from './reducers';
 
 // import promise from 'redux-promise';
 // import './index.css';
-
-// const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
-// const store = createStoreWithMiddleware(reducers);
 import axios from 'axios';
 window.axios = axios;
 
-const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+// const store = createStore(reducers, {}, applyMiddleware(reduxThunk), );
 
 ReactDOM.render(
   <Provider store={store}><App /></Provider>
