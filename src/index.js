@@ -1,33 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { BrowserRouter, Route } from 'react-router-dom';
-import promise from 'redux-promise';
 
-import App from './App';
+import App from './components/App';
 import reducers from './reducers';
-// import SignInModal from './components/SignInModal';
-// import Navigation from './components/Navigation';
-// import Language from './components/Language';
-import JavaScript from './components/Javascript';
-import Landing from './containers/Landing';
-// import Menubar from './containers/Menubar';
+
+import promise from 'redux-promise';
+import './index.css';
+
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
-const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStoreWithMiddleware(reducers);
 
 ReactDOM.render(
-  <Provider store={ store }>
-    <BrowserRouter>
-      <div className="App">
-        <Route path="/javascript" component={JavaScript} />
-        <Route path="/flashPage" component={App} />
-        {/* <Route path="/signIn" component={SignInModal} /> */}
-        <Route exact path="/" component={Landing} />
-      </div>
-    </BrowserRouter>
-  </Provider>
-  , document.getElementById('root'));
+  <Provider store={ store }><App /></Provider>
+  , document.querySelector('#root'));
