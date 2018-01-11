@@ -11,7 +11,7 @@ const authCheck = (req, res, next) => {
 
 // if a user is logged in, return the current user object
 router.get('/current_user', (req, res) => {
-  console.log('CurrUSERR: ', req.user);
+  console.log('CURRENT USER: ', req.user);
   res.send(req.user);
 });
 
