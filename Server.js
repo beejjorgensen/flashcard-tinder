@@ -25,9 +25,16 @@ app.use(
   })
 );
 
-// initialize passport
+// Initialize passport
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Set CORS here
+app.use(function(req, res, next) {
+      res.header("Access-Control-Allow-Origin", "*");
+      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      next();
+});
 
 require('./api/routes/auth-routes')(app);
 
@@ -36,14 +43,14 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("./public/build"));
 }
 
-const corsOptions = {
-  // "origin": "http://localhost:3000",
-  // "methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
-  // "preflightContinue": true,
-  // "optionsSuccessStatus": 204,
-  // "credentials": true // enable set cookie
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   "origin": "http://localhost:3000",
+//   "methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
+//   "preflightContinue": true,
+//   "optionsSuccessStatus": 204,
+//   "credentials": true // enable set cookie
+// };
+// app.use(cors());
 
 // set up temporary view engine. remove once we fully connect to frontend
 app.set('view engine', 'ejs');
@@ -79,9 +86,9 @@ app.post('/cards', (req, res) => {
 app.get('/cards', (req, res) => {
   console.log('Hello from app.get /cards route!');
   Card.find({}, (err, card) => {
-    console.log(card);
+    console.log("Cards Array", card);
     if (err) return res.send(err);
-    res.json(card);
+    res.send(card);
   });
 });
 

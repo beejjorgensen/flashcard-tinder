@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import FlashCard from './FlashCard';
 import DrawButton from '../components/FlashcardButton';
 import FixedMenu from './FixedMenu';
@@ -27,7 +28,7 @@ class FlashPage extends Component {
   }
 
   componentWillMount() {
-    const currentCards = this.state.cards;
+    const currentCards = this.props.cards;
 
     this.setState({
       cards: currentCards,
@@ -64,4 +65,9 @@ class FlashPage extends Component {
   }
 }
 
-export default FlashPage;
+const mapStateToProps = (state) => {
+  console.log('MAPSTATETOPROPS', state);
+  return {cards: state.cards}
+}
+export default connect(mapStateToProps)(FlashPage);
+

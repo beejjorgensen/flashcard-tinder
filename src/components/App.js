@@ -12,8 +12,9 @@ import FlashPage from '../containers/FlashPage';
 
 class App extends Component {
   componentDidMount() {
+    this.props.fetchCards();
      this.props.fetchUser();
-     console.log('this.props.fetchUser()', this.props);
+     console.log('this.props', this.props);
   }
 
   render() {

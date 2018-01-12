@@ -7,6 +7,7 @@ module.exports = app => {
     app.get('/auth/google', 
     passport.authenticate('google', {
       scope: ['profile']
+      
     })
   );
 
@@ -16,6 +17,7 @@ module.exports = app => {
   (req, res) => {
     // you reached the callback URI. What page route do we want to display upon a successful login?
     // res.send(req.user);
+    // console.log('auth/google/redirect', req);
     res.redirect('/');
     // res.redirect('/profile/');
   });

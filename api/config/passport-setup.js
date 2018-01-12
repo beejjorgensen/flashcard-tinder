@@ -4,11 +4,15 @@ const keys = require('./keys');
 const User = require('../models/user-model');
 
 passport.serializeUser((user, done) => {
+  console.log('serializeUser', user);
   done(null, user.id);
 });
 
 passport.deserializeUser((id, done) => {
+  console.log('deserializeUser ID', id);
   User.findById(id).then((user) => {
+    console.log('deserializeUser', user);
+
     done(null, user);
   });
 });
@@ -19,7 +23,7 @@ passport.use(
     callbackURL: '/auth/google/redirect',
     clientID: keys.google.clientID,
     clientSecret: keys.google.clientSecret
-  }, (accessToken, refreshToken, profile, done) => {
+  }, (request, accessToken, refreshToken, profile, done) => {
     // check if user record already exists in our db
     User.findOne({googleId: profile.id}).then((currentUser) => {
       if(currentUser){
