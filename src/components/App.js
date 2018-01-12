@@ -22,7 +22,7 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <div>
-            <Header />
+            {/* <Header /> */}
             <FixedMenu />
             <Route exact path="/" component={HomePageLayout} />
 

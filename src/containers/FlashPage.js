@@ -42,7 +42,7 @@ class FlashPage extends Component {
   }
 
   updateCard() {
-    const currentCards = this.state.cards;
+    const currentCards = this.props.cards;
     this.setState({
       currentCard: this.getRandomCard(currentCards)
     })
@@ -53,8 +53,8 @@ class FlashPage extends Component {
       <div className="App">
         <FixedMenu inverted />
         <div className='cardRow'>
-          <FlashCard front={this.state.currentCard.front}
-                     back={this.state.currentCard.back} 
+          <FlashCard front={this.props.cards.frontCard}
+                     back={this.props.cards.backCard} 
           />
         </div>
         <div className='buttonRow'>

@@ -22,10 +22,6 @@ module.exports = app => {
     // res.redirect('/profile/');
   });
 
-  // auth login
-  // app.get('/login', (req, res) => {
-  //   res.render('login', {user: req.user});
-  // });
 
   // auth logout
   app.get('/api/logout', (req, res) => {

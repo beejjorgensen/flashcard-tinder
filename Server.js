@@ -44,34 +44,11 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("./public/build"));
 }
 
-// const corsOptions = {
-//   "origin": "http://localhost:3000",
-//   "methods": "GET, HEAD, PUT, PATCH, POST, DELETE",
-//   "preflightContinue": true,
-//   "optionsSuccessStatus": 204,
-//   "credentials": true // enable set cookie
-// };
-// app.use(cors());
-
-// set up temporary view engine. remove once we fully connect to frontend
-app.set('view engine', 'ejs');
-
-
-
 
 mongoose.connect(keys.mongodb.dbURI, {useMongoClient: true}, (err) => {
   if (err) return console.log(err);
   console.log('Connected to FlashCards DataBase from Server.js!');
 });
-
-// set up auth routes
-// app.use('/auth', authRoutes);
-// app.use('/profile', profileRoutes);
-
-// create home route
-// app.get('/', (req, res) => {
-//   res.render('home', { user: req.user});
-// });
 
 
 // create calls to cards db
