@@ -25,11 +25,11 @@ passport.use(
       proxy: true,
     },
     (accessToken, refreshToken, profile, done) => {
-      console.log("LOOKING");
+      console.log('Received profile: ', profile, '; searching database...');
       User.findOne({ googleId: profile.id }).then(
         (existingUser) => {
           if (existingUser) {
-            console.log('Existing user is: ', existingUser);
+            console.log(`Found an existing user: ${existingUser}`);
             done(null, existingUser);
           } else {
             console.log(`Creating new user for ${profile} with profile id: ${profile.id}`);
@@ -54,14 +54,17 @@ passport.use(
 
 passport.serializeUser(
   (user, done) => {
-    done(null, user.id);
+    console.log('serializeUser received user ', user, ' and saving ', user.googleId);
+    done(null, user.googleId);
   }
 );
 
 passport.deserializeUser(
   (id, done) => {
+    console.log('deserializeUser received id ', id);
     User.findById(id).then(
       user => {
+        console.log('deserializeUser found ', user);
         done(null, user);
       }
     );

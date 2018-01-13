@@ -59,7 +59,8 @@ module.exports = (app) => {
 
   app.get(
     '/api/current_user', (req, res) => {
-      res.send(req.googleId);
+      console.log('in current_user with req.user ', req.user);
+      res.send(req.user);
     }
   );
 
