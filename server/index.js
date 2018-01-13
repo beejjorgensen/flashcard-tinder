@@ -2,8 +2,8 @@
  * FILENAME: index.js
  * PROJECT:  flashcards-tinder
  * CREATED:  2018-01-12T16:44:14
- * MODIFIED: 2018-01-12T16:44:20
- * VERSION:  0.0.1
+ * MODIFIED: 2018-01-13T11:56:22
+ * VERSION:  0.0.2
  * ABOUT:    flashcard-tinder server entry-point
  * AUTHORS:  Steven O'Campo, Dan Winslow, Latoyya Smith, Wesley Harvey
  * NOTES:   
@@ -27,12 +27,6 @@ const PORT = process.env.PORT || process.env.DEV_PORT;
 const app = express();
 
 /********************
- * PASSPORT 
- ********************/
-app.use(passport.initialize());
-app.use(passport.session());
-
-/********************
  * COOKIE-SESSION
  ********************/
 /* Keep for 24 hours*/
@@ -40,6 +34,13 @@ app.use(cookieSession({
   maxAge: 24 * 60 * 60 * 1000,
   keys: [keys.cookieKey]
 }));
+
+/********************
+ * PASSPORT 
+ ********************/
+app.use(passport.initialize());
+/* must be placed after app.use(session()) */
+app.use(passport.session());
 
 /********************
  * INITIALIZE LOCAL
@@ -71,7 +72,7 @@ mongoose.connect(
  PRODUCTION ENVIRONMENT
 *********************/
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
+  app.use(express.static('./client/build'));
 
   const path = require('path');
   app.get('*', (req, res) => {

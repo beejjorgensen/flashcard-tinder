@@ -2,8 +2,8 @@
  * FILENAME: routes/authRoutes.js
  * PROJECT:  flashcard-tinder
  * CREATED:  2018-01-12T17:24:26
- * MODIFIED: 2018-01-12T17:24:33
- * VERSION:  0.0.1
+ * MODIFIED: 2018-01-13T11:59:17
+ * VERSION:  0.0.2
  * ABOUT:    Sets up oauth routes
  * AUTHORS:  Steven O'Campo, Dan Winslow, Latoyya Smith, John Wells, Wesley Harvey
  * NOTES:   
@@ -52,14 +52,11 @@ module.exports = (app) => {
   
   app.get(
     '/auth/google/callback',
-    passport.authenticate('google'), (req, res) => {
-      res.redirect('/');
-    }
+    passport.authenticate('google')
   );
 
   app.get(
     '/api/current_user', (req, res) => {
-      console.log('in current_user with req.user ', req.user);
       res.send(req.user);
     }
   );
