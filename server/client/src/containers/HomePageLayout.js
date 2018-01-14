@@ -9,11 +9,11 @@ import {
   Grid,
   Header,
   Icon,
-  Menu,
+//  Menu,
   Segment,
   Visibility,
-  // Responsive,
-  Modal,
+// Responsive,
+//  Modal,
   Image
 } from 'semantic-ui-react'
 

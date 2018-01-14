@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-import Header from './Header';
+//import Header from './Header';
 import FixedMenu from '../containers/FixedMenu';
 import HomePageLayout from '../containers/HomePageLayout';
 import JavaScript from './Javascript';
