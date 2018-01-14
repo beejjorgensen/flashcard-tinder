@@ -14,14 +14,13 @@ export const fetchCards = () => {
         payload: data
       });
     });
-}
-  
+  }
 }
 
 export const fetchUser = () => async dispatch => {
   const res = await axios.get(`${ROOT_URL}/api/current_user`, {
     withCredentials: true
-  });
+ });
   console.log('RES INSIDE ACTIONS.JS', res);
 
   dispatch({ type: FETCH_USER, payload: res.data });

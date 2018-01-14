@@ -2,12 +2,15 @@
  * FILENAME: routes/cardsRoutes.js
  * PROJECT:  flashcard-tinder
  * CREATED:  2018-01-12T17:24:26
- * MODIFIED: 2018-01-13T16:37:01
- * VERSION:  0.0.1
+ * MODIFIED: 2018-01-13T18:23:03
+ * VERSION:  0.0.2
  * ABOUT:    Sets up cards routes
  * AUTHORS:  Steven O'Campo, Dan Winslow, Latoyya Smith, Wesley Harvey
  * NOTES:   
  *********************************************************************************/
+
+const mongoose = require('mongoose');
+const Card = mongoose.model('cards');
 
 module.exports = (app) => {
 
