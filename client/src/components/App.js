@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-import Header from './Header';
+//import Header from './Header';
 import FixedMenu from '../containers/FixedMenu';
 import HomePageLayout from '../containers/HomePageLayout';
 import JavaScript from './Javascript';
@@ -14,7 +14,7 @@ class App extends Component {
   componentDidMount() {
     this.props.fetchCards();
      this.props.fetchUser();
-     console.log('this.props', this.props);
+     console.log('COMPONENT DID MOUNT; this.props', this.props);
   }
 
   render() {
