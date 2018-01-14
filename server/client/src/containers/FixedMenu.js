@@ -19,6 +19,7 @@ import {
 // const felix = '../assets/Felix_the_Cat.png'
 
 class FixedMenu extends Component { 
+
   render() {
     return (
       <Menu  inverted fixed='top' size='large'>
@@ -26,33 +27,13 @@ class FixedMenu extends Component {
           <Menu.Item as='a' href="/">Home</Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item>
-              <Modal trigger={<Button as='a' primary>Fixed MENU Sign Up</Button>} basic>
-                <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Ace the Dev Interview!</Modal.Header>
-                <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }><h3>Sign Up to Get Started!</h3></Modal.Header>
-                <Modal.Content>
-                  <Modal.Description>
-                  <div className="btn-Signup">
-                  <Button.Group className='btn-social' vertical>
-                    <Button icon labelPosition='left' color='black' compact><Icon name='github' />GITHUB</Button>
-                    <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /> <a href="/auth/google">GOOGLE+</a></Button>
-                    <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' />FACEBOOK</Button>
-                    <Button icon labelPosition='left' color='teal' compact><Icon name='signup' />SIGN IN</Button>
-                    </Button.Group>
-                  </div>
-                  </Modal.Description>
-                </Modal.Content>
-              </Modal>
-            </Menu.Item>
-            <Menu.Item>
-              <Modal trigger={<Button as='a' secondary>Log In</Button>} basic>
+              <Modal trigger={<Button as='a' secondary>LOG IN</Button>} basic>
               <Modal.Header style={ { display: 'flex', justifyContent: 'center' } }>Log In With</Modal.Header>
               <Modal.Content>
                   <Modal.Description>
                   <div className="btn-Signup">
                   <Button.Group className='btn-social' vertical style={ { display: 'flex', justifyContent: 'center' } }>
-                    <Button icon labelPosition='left' color='black' compact><Icon name='github' />       <a href="/login">GITHUB TEST</a></Button>
                     <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /> <a href="/auth/google">GOOGLE+</a></Button>
-                    <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook f' /> <a href="/signIn">FACEBOOK TEST</a></Button>
                     </Button.Group>
                   </div>
                   </Modal.Description>

@@ -70,7 +70,7 @@ class HomePageLayout extends Component {
             </Container>
           </Segment>
         </Visibility>
-        <a id='languages'>
+        <div id='languages'>
           <Segment style={{ padding: '8em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>
               <Grid.Row>
@@ -80,10 +80,11 @@ class HomePageLayout extends Component {
           </Segment>
           <Segment inverted vertical style={{ padding: '5em 0em' }}>
           </Segment>
-        </a>
+        </div>
       </div>
     )
   }
 }
 
 export default HomePageLayout; 
+
