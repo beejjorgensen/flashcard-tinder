@@ -2,10 +2,10 @@
  * FILENAME: routes/authRoutes.js
  * PROJECT:  flashcard-tinder
  * CREATED:  2018-01-12T17:24:26
- * MODIFIED: 2018-01-13T14:27:58
- * VERSION:  0.0.4
+ * MODIFIED: 2018-01-13T16:37:45
+ * VERSION:  0.0.5
  * ABOUT:    Sets up oauth routes
- * AUTHORS:  Steven O'Campo, Dan Winslow, Latoyya Smith, John Wells, Wesley Harvey
+ * AUTHORS:  Steven O'Campo, Dan Winslow, Latoyya Smith, Wesley Harvey
  * NOTES:   
  *********************************************************************************/
 

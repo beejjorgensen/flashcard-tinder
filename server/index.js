@@ -2,8 +2,8 @@
  * FILENAME: index.js
  * PROJECT:  flashcards-tinder
  * CREATED:  2018-01-12T16:44:14
- * MODIFIED: 2018-01-13T11:56:22
- * VERSION:  0.0.2
+ * MODIFIED: 2018-01-13T16:40:02
+ * VERSION:  0.0.3
  * ABOUT:    flashcard-tinder server entry-point
  * AUTHORS:  Steven O'Campo, Dan Winslow, Latoyya Smith, Wesley Harvey
  * NOTES:   
@@ -48,7 +48,7 @@ app.use(passport.session());
 require('./models/User');
 require('./services/passport');
 require('./routes/authRoutes')(app);
-
+require('./routes/cardsRoutes')(app);
 
 /********************
  * START SERVER
