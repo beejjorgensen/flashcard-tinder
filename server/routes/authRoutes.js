@@ -2,8 +2,8 @@
  * FILENAME: routes/authRoutes.js
  * PROJECT:  flashcard-tinder
  * CREATED:  2018-01-12T17:24:26
- * MODIFIED: 2018-01-13T16:37:45
- * VERSION:  0.0.5
+ * MODIFIED: 2018-01-14T20:41:11
+ * VERSION:  0.0.6
  * ABOUT:    Sets up oauth routes
  * AUTHORS:  Steven O'Campo, Dan Winslow, Latoyya Smith, Wesley Harvey
  * NOTES:   
@@ -24,7 +24,7 @@ module.exports = (app) => {
 
   app.get('/api/login', (req, res) => {
     if (!req.user)
-      res.redirect('/api/google')
+      res.redirect('/auth/google')
     else
       res.status(200).send({"logged_in_user": req.user});
   });

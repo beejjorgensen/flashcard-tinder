@@ -2,8 +2,8 @@
  * FILENAME: index.js
  * PROJECT:  flashcards-tinder
  * CREATED:  2018-01-12T16:44:14
- * MODIFIED: 2018-01-13T18:32:04
- * VERSION:  0.0.4
+ * MODIFIED: 2018-01-14T20:39:54
+ * VERSION:  0.0.5
  * ABOUT:    flashcard-tinder server entry-point
  * AUTHORS:  Steven O'Campo, Dan Winslow, Latoyya Smith, Wesley Harvey
  * NOTES:   
@@ -43,14 +43,6 @@ app.use(passport.initialize());
 /* must be placed after app.use(session()) */
 app.use(passport.session());
 
-// Set CORS here
-app.use(function(req, res, next) {
-      res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-      res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-      res.header("Access-Control-Allow-Credentials", "true");
-      next();
-});
-
 /********************
  * INITIALIZE LOCAL
  ********************/
@@ -82,12 +74,12 @@ mongoose.connect(
  PRODUCTION ENVIRONMENT
 *********************/
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('./client/build'));
+  app.use(express.static('../client/build'));
 
   const path = require('path');
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(
-      __dirname, 'client', 'build', 'index.html'
+      __dirname, '..', 'client', 'build', 'index.html'
     ));
   });
 }
