@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import { Divider, Image } from 'semantic-ui-react'
-import '../App.css'
+import React, { Component } from 'react';
+import { Divider, Image } from 'semantic-ui-react';
+import '../App.css';
+import '../style.css';
 
 class Language extends Component {
   render() {
@@ -33,6 +34,6 @@ class Language extends Component {
       </div>
     )
   }
-}
+};
 
-export default Language
+export default Language;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import App from '../App';
 import { Sidebar, Button, Menu, Image, Icon } from 'semantic-ui-react';
 import '../App.css';
+import '../style.css';
 
 class Menubar extends Component {
   constructor() {

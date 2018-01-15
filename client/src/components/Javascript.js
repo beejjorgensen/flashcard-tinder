@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Divider, Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import '../App.css';
+import '../style.css';
 
 class JavaScript extends Component {
    render() {
