@@ -13,8 +13,8 @@ import FlashPage from '../containers/FlashPage';
 class App extends Component {
   componentDidMount() {
     this.props.fetchCards();
-     this.props.fetchUser();
-     console.log('COMPONENT DID MOUNT; this.props', this.props);
+    this.props.fetchUser();
+    console.log('COMPONENT DID MOUNT; this.props', this.props);
   }
 
   render() {
@@ -26,7 +26,7 @@ class App extends Component {
             <FixedMenu />
             <Route exact path="/" component={HomePageLayout} />
 
-            {/* <Route exact path="/currentUser" component={CurrentUser} /> */}
+            {/* <Route exact path="/api/current_user" component={CurrentUser} />*/}
             <Route exact path="/javascript" component={JavaScript} />
             <Route path="/flashPage" component={FlashPage} />
           </div>
@@ -40,4 +40,5 @@ const mapStateToProps = (state) => {
   console.log('MAPSTATETOPROPS', state);
   return {auth: state.auth}
 }
+
 export default connect(mapStateToProps, actions)(App);
