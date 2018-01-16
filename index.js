@@ -39,7 +39,6 @@ app.use(cookieSession({
  * PASSPORT 
  ********************/
 app.use(passport.initialize());
-/* must be placed after app.use(session()) */
 app.use(passport.session());
 
 /********************
@@ -73,12 +72,12 @@ mongoose.connect(
  PRODUCTION ENVIRONMENT
 *********************/
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('../client/build'));
+  app.use(express.static('client/build'));
 
   const path = require('path');
   app.get('*', (req, res) => {
     res.sendFile(path.resolve(
-      __dirname, '..', 'client', 'build', 'index.html'
+      __dirname, 'client', 'build', 'index.html'
     ));
   });
 }

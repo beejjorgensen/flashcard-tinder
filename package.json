@@ -19,8 +19,8 @@
     "yarn": "1.3.2"
   },
   "scripts": {
-    "start": "node server/index.js",
-    "server": "nodemon server/index.js",
+    "start": "node index.js",
+    "server": "nodemon index.js",
     "client": "cd client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
