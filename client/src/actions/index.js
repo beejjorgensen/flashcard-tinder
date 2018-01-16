@@ -1,23 +1,16 @@
 import axios from 'axios';
+import { FETCH_FLASHCARDS, FETCH_USER } from './types';
 
-export const FETCH_FLASHCARDS = 'fetch_flashcards';
-export const FETCH_USER = 'fetch_user';
+export const fetchCards = () => async dispatch => {
+  const res = await axios.get('/api/cards');
+  console.log('CARDS RES INSIDE ACTIONS.JS', res);
 
-export const fetchCards = () => {
-  return (dispatch) => {
-    axios.get('/api/cards')
-    .then((data) => {
-      dispatch ({
-        type: FETCH_FLASHCARDS,
-        payload: data
-      });
-    });
-  }
-}
+  dispatch({ type: FETCH_FLASHCARDS, payload: res.data });
+};
 
 export const fetchUser = () => async dispatch => {
   const res = await axios.get('/api/current_user');
-  console.log('RES INSIDE ACTIONS.JS', res);
+  console.log('USER RES INSIDE ACTIONS.JS', res);
 
   dispatch({ type: FETCH_USER, payload: res.data });
 };

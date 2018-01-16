@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import '../App.css';
+import '../style.css';
+
 // import Language from '../components/Language';
 // import './index.js';
 import {

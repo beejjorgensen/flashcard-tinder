@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 // import { connect } from 'react-redux';
 // import { fetchCards } from '../actions/index';
 import '../App.css';
+import '../style.css';
+
 // import FlashcardFront from '../components/FlashcardFront';
 // import FlashcardBack from '../components/FlashcardBack';
 // import FlashcardButton from '../components/FlashcardButton';

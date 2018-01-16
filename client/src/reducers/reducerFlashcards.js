@@ -1,4 +1,4 @@
-import { FETCH_FLASHCARDS } from '../actions';
+import { FETCH_FLASHCARDS } from '../actions/types';
 
 const init = { cards: [{front: 'front', back: 'back'}]};
 
@@ -15,3 +15,4 @@ export default function(state = init, action) {
     return state;
   }
 }
+
