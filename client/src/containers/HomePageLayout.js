@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../App.css';
 import '../style.css';
 import Language from '../components/Language';
-import FixedMenu from './FixedMenu';
+// import FixedMenu from './FixedMenu';
 // import './index.js';
 import {
   Button,
@@ -22,31 +22,16 @@ const felix = '../assets/Felix_the_Cat.png'
 
 
 class HomePageLayout extends Component {
-  state = {}
-
-  hideFixedMenu = () => this.setState({ visible: false })
-  showFixedMenu = () => this.setState({ visible: true })
 
   render() {
-    const { visible } = this.state
-
     return (
       <div className='landingPage'>
-        { visible ? <FixedMenu /> : null }
-
-        <Visibility
-          onBottomPassed={this.showFixedMenu}
-          onBottomVisible={this.hideFixedMenu}
-          once={false}
-        >
           <Segment
             inverted
             textAlign='center'
             vertical
             className='top-container'
           >
-            
-
             <Container text>
               <Header
                 as='h1'
@@ -70,7 +55,7 @@ class HomePageLayout extends Component {
               </Button>
             </Container>
           </Segment>
-        </Visibility>
+
         <div id='languages'>
           <Segment style={{ padding: '8em 0em' }} vertical>
             <Grid container stackable verticalAlign='middle'>

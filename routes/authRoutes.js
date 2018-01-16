@@ -17,9 +17,9 @@ module.exports = (app) => {
     '/',
     (req, res) => {
       if (req.user)
-        res.status(200).send(req.user);
+        res.status(200).redirect('/HomePageLayout');
       else
-        res.status(200).send("guest");
+        res.status(200).redirect('/HomePageLayout');
     });
 
   app.get('/api/login', (req, res) => {

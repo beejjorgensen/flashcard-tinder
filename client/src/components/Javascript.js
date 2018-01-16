@@ -33,7 +33,7 @@ class JavaScript extends Component {
              <a href="/flashpage"><li>Scope</li></a>
           </ul>
           <div id="btn-back" >
-             <Link to="/"><img src="/assets/back-button.png" className="btn-back" alt="back button"/></Link>
+             <Link to="/HomePageLayout"><img src="/assets/back-button.png" className="btn-back" alt="back button"/></Link>
           </div>
         </div>
         );
