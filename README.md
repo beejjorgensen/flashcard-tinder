@@ -1,4 +1,4 @@
-# Flashcard Tinder
+# Studdy Buddy
 ## Created by Latoyya, Wesley, Dan, John, and Stevie :)
 
 ### Built using:
