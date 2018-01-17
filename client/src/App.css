@@ -57,6 +57,9 @@ FLASHCARD
   overflow: hidden;
   text-align: center;
   background-color: rgba(255,251,251, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card .back {
@@ -67,18 +70,22 @@ FLASHCARD
   overflow: hidden;
   transform: rotateY(180deg);
   background-color: rgba(255,251,251, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px;
 }
 
 .frontCard {
   color: #333333;
   font-size: 2.3rem;
-  padding-top: 10%;
+  /* padding-top: 10%; */
 }
 
 .backCard {
   color: #333333;
   font-size: 1rem;
-  padding-top: 20%;
+  /* padding-top: 20%; */
 }
 
 .flash-buttons {
@@ -270,4 +277,8 @@ MENUBAR
 .hamburger {
   width: 2.5rem;
   height: 2rem;
+}
+
+.buttonRow {
+  margin-bottom: 2rem;
 }
