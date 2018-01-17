@@ -12,6 +12,8 @@ MAIN
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Titillium Web', sans-serif;
+
 }
 
 .container {
@@ -164,18 +166,28 @@ ul a {
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
   background-color: #000000;
-  margin: 0.625rem;
   padding: 0.625rem;
   font-weight: bold;
   font-size: 1.5rem;
   width: 60%;
   text-align: center;
+  border-radius: 2px;  
 }
 
-ul a:hover {
-  color: #000000;
-  background-color: #f7e118;
-  font-size: 25px;
+/* ul a:hover {
+  box-shadow: 0px 0px 0px 3px #FFF ;
+  color: white;
+} */
+
+.button-hover {
+  box-shadow: 0px 0px 0px 1px #FFF ;
+  transition: box-shadow 0.3s linear;
+  margin: 0.5em; 
+}
+
+.button-hover:hover {
+  box-shadow: 0px 0px 0px 3px #FFF ;
+  color: white;
 }
 
 .btn-back {
@@ -260,6 +272,9 @@ LANDING PAGE AKA FIXED MENU
 
 .btn-social {
   width: 250px;
+  margin: 10px;
+  
+
 }
 
 .btn-git {

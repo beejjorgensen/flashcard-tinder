@@ -9,7 +9,9 @@ class Language extends Component {
 	<div className='landingPage'>
 	  <div className="typewriter-container">
 	    <div className="typewriter">
-  	      <h1 id='languageText'>Choose a language and start learning now!</h1>
+  	      <h1 id='languageText' style={{ 
+          fontFamily: 'Titillium Web' }} >
+          Choose a language and start learning!</h1>
 	    </div>
 
             <div className="lang-container">

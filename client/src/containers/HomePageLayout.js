@@ -36,17 +36,21 @@ class HomePageLayout extends Component {
                 as='h1'
                 content='Studdy Buddy'
                 inverted
-                style={{ fontSize: '7em', fontWeight: 'normal', marginBottom: 0, marginTop: '1.1em', fontFamily: 'Permanent Marker' }}
+                style={{ fontSize: '7em', fontWeight: 'normal', 
+                marginBottom: 0, marginTop: '1.1em', 
+                fontFamily: 'Permanent Marker' }}
               />
 
               <Header
                 as='h2'
                 content='Level Up Your Knowledge Now'
                 inverted
-                style={{ fontSize: '1.7em', fontWeight: 'normal', fontFamily: 'Titillium Web' }}
+                style={{ fontSize: '1.7em', fontWeight: 'normal', 
+                fontFamily: 'Titillium Web', marginTop: '20px' }}
               />
-              <Button size='huge' href='#languages' basic color='green'>
-                Level Up
+              <Button className='button-hover' size='huge' href='#languages' basic inverted
+                style={{marginTop: '20px'}}>
+                Get Started
                 <Icon name='right arrow' />
               </Button>
             </Container>
