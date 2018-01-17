@@ -22,7 +22,9 @@ class HomePageLayout extends Component {
   
   render() {
     return (
+      
       <div className='landingPage'>
+      
           <Segment
             
             textAlign='center'
@@ -36,8 +38,6 @@ class HomePageLayout extends Component {
                 inverted
                 style={{ fontSize: '7em', fontWeight: 'normal', marginBottom: 0, marginTop: '1.1em', fontFamily: 'Permanent Marker' }}
               />
-
-              <Icon name='line chart' size='massive' inverted />
 
               <Header
                 as='h2'
