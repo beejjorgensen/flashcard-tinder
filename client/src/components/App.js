@@ -14,7 +14,7 @@ class App extends Component {
   componentDidMount() {
     this.props.fetchCards();
     this.props.fetchUser();
-    console.log('COMPONENT DID MOUNT; this.props', this.props);
+    console.log('APP COMPONENT DID MOUNT; this.props', this.props);
   }
 
   render() {

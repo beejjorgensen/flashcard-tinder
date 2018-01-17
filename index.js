@@ -18,6 +18,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const bodyParser = require('body-parser');
 
 /*********************
   APPLICATION SERVER
@@ -25,6 +26,7 @@ const passport = require('passport');
 /* Heroku will dynamically allocate a PORT */
 const PORT = process.env.PORT || process.env.DEV_PORT;
 const app = express();
+app.use(bodyParser.json());
 
 /********************
  * COOKIE-SESSION

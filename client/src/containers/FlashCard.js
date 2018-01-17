@@ -12,14 +12,16 @@ import '../style.css';
 
 class FlashCard extends Component {
   render() {
+
+    
     return (
       <div className='card-container'>
         <div className='card'>
           <div className='front'>
-            <div className='frontCard'>{this.props.front}</div>
+            <div className='frontCard'>{this.props.front === undefined? "": this.props.front.frontcard.item}</div>
           </div>
           <div className='back'>
-            <div className='backCard' >{this.props.back}</div>
+            <div className='backCard' >{this.props.back === undefined? "": this.props.back.backcard.definition}</div>
           </div>
         </div>
       </div>

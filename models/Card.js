@@ -23,11 +23,11 @@ const cardSchema = new Schema({
   frontCard: {
     item: String
   },
-  backcard: {
+  backCard: {
     definition: String,
     syntax: String,
     example: String
   }
 });
 
-mongoose.model('cards', cardSchema);
+module.exports = mongoose.model('flashcards', cardSchema);
