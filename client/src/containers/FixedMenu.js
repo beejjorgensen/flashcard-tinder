@@ -39,7 +39,7 @@ class FixedMenu extends Component {
       <Menu  inverted fixed='top' size='large'>
         <Container>
           
-        <Menu.Item as='a' href="/">Studdy Buddy</Menu.Item>
+        <Menu.Item as='a' href="/" style={{ fontFamily: 'Permanent Marker'}}>Studdy Buddy</Menu.Item>
 
           <Menu.Menu position='right'>
           {/* 

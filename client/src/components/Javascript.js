@@ -10,7 +10,7 @@ class JavaScript extends Component {
         <div>
           <div className="category-icon">
             <Image.Group size='small'>
-               <Image src='/assets/javascript_icon.png'/>
+               <Image src='/assets/javascript_icon_yellow.png'/>
             </Image.Group>
             <Divider hidden />
           </div>
@@ -19,7 +19,7 @@ class JavaScript extends Component {
             <h1 className="category-header">JavaScript Study</h1> 
           </div>
           <ul className="category-list">
-             <a href="/flashpage"><li>Overview</li></a>
+             <a href="/flashpage"><li><span>Overview</span></li></a>
              <a href="/flashpage"><li>Basic Concepts</li></a>
              <a href="/flashpage"><li>Conditions and Loops</li></a>
              <a href="/flashpage"><li>Functions</li></a>
@@ -33,7 +33,7 @@ class JavaScript extends Component {
              <a href="/flashpage"><li>Scope</li></a>
           </ul>
           <div className="btn-back">
-            <Link to="/HomePageLayout">
+            <Link to="/">
               <Icon name='arrow circle left' size='huge' inverted />
             </Link>
           </div>
