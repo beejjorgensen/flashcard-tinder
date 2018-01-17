@@ -17,9 +17,9 @@ module.exports = (app) => {
     '/',
     (req, res) => {
       if (req.user)
-        res.status(200).redirect('/HomePageLayout');
+        res.status(200).redirect('/');
       else
-        res.status(200).redirect('/HomePageLayout');
+        res.status(200).redirect('/');
     });
 
   app.get('/api/login', (req, res) => {
@@ -49,14 +49,16 @@ module.exports = (app) => {
       if (req.user)
         res.send(req.user);
       else
-        res.send("No current user");
+        // res.send("No current user");
+        res.send(req.user);
     }
   );
 
   app.get(
     '/api/logout', (req, res) => {
       req.logout();
-      res.send({ "Bye": "From Server" });
+      res.redirect('/');
+      // res.send({ "Bye": "From Server" });
     }
   );
 }
