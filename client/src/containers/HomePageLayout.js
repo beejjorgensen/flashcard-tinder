@@ -43,7 +43,7 @@ class HomePageLayout extends Component {
 
               <Header
                 as='h2'
-                content='Level Up Your Knowledge Now'
+                content='Level Up Your Programming Knowledge Now'
                 inverted
                 style={{ fontSize: '1.7em', fontWeight: 'normal', 
                 fontFamily: 'Titillium Web', marginTop: '20px' }}

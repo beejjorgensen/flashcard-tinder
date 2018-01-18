@@ -50,14 +50,12 @@ class FixedMenu extends Component {
           {/* <Menu.Item as='a' href="/">Home</Menu.Item> */}
 
             <Menu.Item>
-              <Modal trigger={ this.renderContent() } >
+              <Modal trigger={ this.renderContent() } basic>
               
               <Modal.Content>
                   <Modal.Description>
                   <div className="btn-Signup">
-                  <Button.Group 
-                  className='btn-social' 
-                  vertical style={ { display: 'flex', justifyContent: 'center' } }>
+                  <Button.Group vertical>
                     <Button className='btn-social' icon labelPosition='left' color='google plus' compact>
                       <Icon name='google' /> <a href="/auth/google" style={{color:'white'}}>GOOGLE+</a></Button>
                     <Button className='btn-social' icon labelPosition='left' color='facebook' compact>

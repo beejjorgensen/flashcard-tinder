@@ -8,9 +8,12 @@ class Language extends Component {
     return (
 	<div className='landingPage'>
 	  <div className="typewriter-container">
-	    <div className="typewriter">
+	    <div className="typewriter ">
   	      <h1 id='languageText' style={{ 
           fontFamily: 'Titillium Web' }} >
+          {/* margin: 0 auto; width: 80%  test this*/}
+          StuddyBuddy is a learning tool based on 21st century flashcard technology.
+          Madd algorithms are at work to optimize your learning experience.
           Choose a language and start learning!</h1>
 	    </div>
 
