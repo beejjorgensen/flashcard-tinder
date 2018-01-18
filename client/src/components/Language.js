@@ -13,7 +13,7 @@ class Language extends Component {
           fontFamily: 'Titillium Web' }} >
           {/* margin: 0 auto; width: 80%  test this*/}
           StuddyBuddy is a learning tool based on 21st century flashcard technology.
-          Madd algorithms are at work to optimize your learning experience.
+          Proven study techniques are at work behind the scenes to optimize your learning experience.
           Choose a language and start learning!</h1>
 	    </div>
 
