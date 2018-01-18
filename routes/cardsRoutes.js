@@ -10,23 +10,31 @@
  *********************************************************************************/
 
 const mongoose = require('mongoose');
-const Card = mongoose.model('cards');
+const Card = require('../models/Card');
 
 module.exports = (app) => {
 
   app.post('/api/cards', (req, res) => {
-    const { _id, frontCard, backCard } = req.body;
-    const card = new Card({_id, frontCard, backCard});
+    
+    const { id, createdBy, createdOn, modifiedBy, 
+      modifiedOn, group, category, frontCard, backCard, example } = req.body;
+
+    const card = new Card({ id, createdBy, createdOn, modifiedBy, modifiedOn,
+      group, category, frontCard, backCard, example });
+    
     card.save((err, newCard) => {
       if (err) return res.send(err);
-      res.json(newCard)
+      res.json(newCard);
     });
+
+    // console.log("Req.body:", req.body);
+    // res.send('bo00yah!');
   });
 
   app.get('/api/cards', (req, res) => {
     console.log('Hello from app.get /api/cards route!');
     Card.find({}, (err, card) => {
-      console.log("Cards Array", card);
+      console.log("Cards Route!!!", card);
       if (err) return res.send(err);
       res.send(card);
     });

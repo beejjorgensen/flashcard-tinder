@@ -26,20 +26,20 @@ class FixedMenu extends Component {
       case null:
         return;
       case false:
-        return  <Button as='a'basic color='green'>Login</Button>;
+        return  <Button as='a'basic inverted>Login</Button>;
         break;
       default: 
-        return <Button as='a' basic color='green'><a href="/api/logout" style={{ color: 'white'}}>{this.props.auth.username} | Logout</a></Button>;
+        return <Button as='a' basic inverted><a href="/api/logout" style={{ color: 'white'}}>{this.props.auth.username} | Logout</a></Button>;
     }
   }
 
   render() {
     console.log('FIXED MENU PROPS', this.props.auth);
     return (
-      <Menu  inverted fixed='top' size='large'>
+      <Menu  borderless inverted fixed='top' size='large' >
         <Container>
           
-        <Menu.Item as='a' href="/" style={{ fontFamily: 'Permanent Marker'}}>Studdy Buddy</Menu.Item>
+        <Menu.Item as='a' href="/" style={{ fontFamily: 'Permanent Marker'}} >Studdy Buddy</Menu.Item>
 
           <Menu.Menu position='right'>
           {/* 
@@ -55,12 +55,13 @@ class FixedMenu extends Component {
               <Modal.Content>
                   <Modal.Description>
                   <div className="btn-Signup">
-                  <Button.Group 
-                  className='btn-social' 
-                  vertical style={ { display: 'flex', justifyContent: 'center' } }>
-                    <Button icon labelPosition='left' color='google plus' compact><Icon name='google' /> <a href="/auth/google" style={{color:'white'}}>GOOGLE+</a></Button>
-                    <Button icon labelPosition='left' color='facebook' compact><Icon name='facebook' /> <a href="/auth/google" style={{color:'white'}}>FACEBOOK</a></Button>
-                    <Button icon labelPosition='left' color='black' compact><Icon name='github' /> <a href="/auth/google" style={{color:'white'}}>GITHUB</a></Button>
+                  <Button.Group vertical>
+                    <Button className='btn-social' icon labelPosition='left' color='google plus' compact>
+                      <Icon name='google' /> <a href="/auth/google" style={{color:'white'}}>GOOGLE+</a></Button>
+                    <Button className='btn-social' icon labelPosition='left' color='facebook' compact>
+                      <Icon name='facebook' /> <a href="/auth/google" style={{color:'white'}}>FACEBOOK</a></Button>
+                    <Button className='btn-social' icon labelPosition='left' color='black' compact>
+                      <Icon name='github' /> <a href="/auth/google" style={{color:'white'}}>GITHUB</a></Button>
                     </Button.Group>
                     
                   </div>
