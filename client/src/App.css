@@ -5,9 +5,8 @@ MAIN
 .App {
   width: 100%;
   min-height: 100%; 
-  /* background-image: url(/assets/emc2.jpg); */
-  background-color: black;
-  opacity: 0.5;
+  background:black url(/assets/emc2.png); 
+  opacity: 1;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -15,13 +14,13 @@ MAIN
   align-items: center;
   justify-content: center;
   font-family: 'Titillium Web', sans-serif;
-  /* filter: grayscale(20%); */
+   /* filter: grayscale(20%); */
 }
 
 /* .App::after {
   content: "";
-  background: url(/assets/Algorithm.jpg);
-  opacity: 1;
+  background: black url(/assets/emc2.png);
+  opacity: 0.2;
   top: 0;
   left: 0;
   bottom: 0;
@@ -48,7 +47,7 @@ FLASHCARD
   perspective: 100rem;
   position: relative;
   margin: auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   transition: ease-in;
 }
 
@@ -316,5 +315,5 @@ MENUBAR
 }
 
 .buttonRow {
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
 }
