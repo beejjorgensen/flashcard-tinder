@@ -67,13 +67,13 @@ class FlashPage extends Component {
           hoverable
         >
           <Grid centered divided columns={3}>
-            <Grid.Column textAlign="center">
+            <Grid.Column style={{backgroundColor: "#db2828" }}textAlign="center">
               <p>Red Button removes card from consideration</p>
             </Grid.Column>
-            <Grid.Column textAlign="center">
+            <Grid.Column style={{backgroundColor: "#eaae00"}}textAlign="center">
               <p>Yellow Button keeps card at same pace</p>
             </Grid.Column>
-            <Grid.Column textAlign="center">
+            <Grid.Column style={{backgroundColor: "#16ab39"}}textAlign="center">
               <p>Green Button shows card more frequently</p>
             </Grid.Column>
           </Grid>

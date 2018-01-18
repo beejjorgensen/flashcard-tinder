@@ -64,8 +64,6 @@ class HomePageLayout extends Component {
               </Grid.Row>
             </Grid>
           </Segment>
-          <Segment inverted vertical style={{ padding: '5em 0em' }}>
-          </Segment>
         </div>
       </div>
     )
