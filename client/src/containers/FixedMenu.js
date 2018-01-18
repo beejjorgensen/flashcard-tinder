@@ -36,10 +36,10 @@ class FixedMenu extends Component {
   render() {
     console.log('FIXED MENU PROPS', this.props.auth);
     return (
-      <Menu  inverted fixed='top' size='large'>
+      <Menu  borderless inverted fixed='top' size='large' >
         <Container>
           
-        <Menu.Item as='a' href="/" style={{ fontFamily: 'Permanent Marker'}}>Studdy Buddy</Menu.Item>
+        <Menu.Item as='a' href="/" style={{ fontFamily: 'Permanent Marker'}} >Studdy Buddy</Menu.Item>
 
           <Menu.Menu position='right'>
           {/* 
