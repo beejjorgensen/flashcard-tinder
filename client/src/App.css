@@ -4,15 +4,31 @@ MAIN
 
 .App {
   width: 100%;
-  min-height: 100%;
-  background-color: #000000;
+  min-height: 100%; 
+  /* background-image: url(/assets/emc2.jpg); */
+  background-color: black;
+  opacity: 0.5;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Titillium Web', sans-serif;
+  /* filter: grayscale(20%); */
 }
+
+/* .App::after {
+  content: "";
+  background: url(/assets/Algorithm.jpg);
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  } */
 
 .container {
   display: flex;
@@ -164,18 +180,28 @@ ul a {
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
   background-color: #000000;
-  margin: 0.625rem;
   padding: 0.625rem;
   font-weight: bold;
   font-size: 1.5rem;
   width: 60%;
   text-align: center;
+  border-radius: 2px;  
 }
 
-ul a:hover {
-  color: #000000;
-  background-color: #f7e118;
-  font-size: 25px;
+/* ul a:hover {
+  box-shadow: 0px 0px 0px 3px #FFF ;
+  color: white;
+} */
+
+.button-hover {
+  box-shadow: 0px 0px 0px 1px #FFF ;
+  transition: box-shadow 0.3s linear;
+  margin: 0.5em; 
+}
+
+.button-hover:hover {
+  box-shadow: 0px 0px 0px 3px #FFF ;
+  color: white;
 }
 
 .btn-back {
@@ -204,7 +230,8 @@ Language Components
   align-items: center;
   justify-content: center;
   padding-top: 0.5em;
-  text-align: center;
+  margin: 0 auto; 
+  width: 80%;
 }
 
 .typewriter h1 {
@@ -260,6 +287,9 @@ LANDING PAGE AKA FIXED MENU
 
 .btn-social {
   width: 250px;
+  margin: 10px !important;
+  border-radius: 2px !important;
+  
 }
 
 .btn-git {
