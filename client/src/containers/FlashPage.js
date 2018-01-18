@@ -27,6 +27,17 @@ class FlashPage extends Component {
     }
   }
 
+  updateCard = () => {
+    console.log('Clicked Current Card', this.props.cards);
+    const currentCard = this.props.cards[
+      Math.floor(Math.random() * this.props.cards.length)
+    ];
+    this.setState(_ => {
+      return {
+        currentCard
+      };
+    });
+  };
   render() {
     // console.log('CURRENT CARD', this.state.currentCard);
     // let x = this.props.cards[5];
