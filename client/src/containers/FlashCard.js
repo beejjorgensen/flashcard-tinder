@@ -9,19 +9,25 @@ import '../style.css';
 // import FlashcardBack from '../components/FlashcardBack';
 // import FlashcardButton from '../components/FlashcardButton';
 
-
 class FlashCard extends Component {
   render() {
-
-    
+    const { front, back } = this.props;
     return (
-      <div className='card-container'>
-        <div className='card'>
-          <div className='front'>
-            <div className='frontCard'>{this.props.front === undefined? "": this.props.front.frontcard.item}</div>
+      <div className="card-container">
+        <div className="card">
+          <div className="front">
+            <div className="frontCard">
+              {Object.keys(front).length === 0
+                ? ''
+                : this.props.front.frontcard.item}
+            </div>
           </div>
-          <div className='back'>
-            <div className='backCard' >{this.props.back === undefined? "": this.props.back.backcard.definition}</div>
+          <div className="back">
+            <div className="backCard">
+              {Object.keys(back).length === 0
+                ? ''
+                : this.props.back.backcard.definition}
+            </div>
           </div>
         </div>
       </div>
